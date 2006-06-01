@@ -50,7 +50,7 @@ class StringReader extends Reader
     
     public function read()
     {
-        return $this->string{ $this->index++ };
+	    return ( isset( $this->string{ $this->index++ } ) ) ? $this->string{ $this->index } : false;
     }
     
     public function close()

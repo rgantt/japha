@@ -187,6 +187,7 @@ class String extends Object implements Serializable//, Comparable, CharSequence
      *
      * @param   buffer   a <code>StringBuffer</code>.
      */
+    /*
     public function String ( StringBuffer $buffer ) 
     {
             $buffer->setShared();
@@ -194,6 +195,7 @@ class String extends Object implements Serializable//, Comparable, CharSequence
             $this->offset = 0;
             $this->count = $buffer->length();
     }
+    */
 
     /**
      * Returns the length of this string.
