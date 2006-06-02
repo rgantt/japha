@@ -19,9 +19,16 @@ final class Method extends AccessibleObject implements Member
 	
 	function __construct( $class, $name )
 	{
-		$this->name = $name;
-		$this->class = $class;
-		$this->Reflection = new ReflectionMethod( $this->class, $this->name );
+		$this->_class = $class;
+		if( is_object( $name ) )
+		{
+			$this->name = $name->toString();
+		}
+		else
+		{
+			$this->name = $name;
+		}
+		$this->Reflection = new ReflectionMethod( $this->_class, $this->name );
 	}
 	
 	function __destruct()
@@ -53,7 +60,8 @@ final class Method extends AccessibleObject implements Member
 	// Current function, which would be Method::getParameterTypes in the eyes of Zend
 	function getParameterTypes()
 	{
-		return func_get_args();
+		return array();
+		//return func_get_args();
 	}
 	
 	// This is pretty hairy, since PHP is loosely typed

@@ -101,6 +101,12 @@ class String extends Object implements Serializable//, Comparable, CharSequence
     //private static final ObjectStreamField[] serialPersistentFields =
     //    new ObjectStreamField[0];
 
+    // This is the default constructor for now, so that it matches with the consistent php string -> japha String mapping
+    public function __construct( $string )
+    {
+	    $this->value = $string;
+    }
+    
     /**
      * Initializes a newly created <code>String</code> object so that it
      * represents an empty character sequence.  Note that use of this 
@@ -356,12 +362,13 @@ class String extends Object implements Serializable//, Comparable, CharSequence
      */
      public function equals( Object $anObject ) 
      {
-         if ( $this == $anObject) 
+         if ( $this == $anObject ) 
          {
              return true;
          }
          if ( $anObject instanceof String ) 
          {
+		 return $anObject->toString() == $this->toString();
              $anotherString = $anObject;
              $n = $this->count;
              if ( $n == $anotherString->count ) 
@@ -440,6 +447,11 @@ class String extends Object implements Serializable//, Comparable, CharSequence
             $this->hash = $h;
         }
         return $h;
+    }
+    
+    public function toString()
+    {
+	    return $this->value;
     }
 }
 ?>

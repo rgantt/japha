@@ -673,7 +673,6 @@ function trace( $obj )
 {
     echo "<pre>";
     $ar = print_r( $obj, true );
-    die();
     foreach( $ar as $key => $value )
     {
         if( !eregI( 'trace', $key ) )

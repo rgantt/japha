@@ -20,6 +20,7 @@ $classpath = array(
     "C:/htdocs/japha3",
     "C:/htdocs/intake",
     'C:/htdocs/blargon3',
+    "C:/htdocs/jpunit",
     "C:/htdocs/"
 );
 ?>

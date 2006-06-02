@@ -142,7 +142,7 @@ class Throwable extends Object implements Serializable
 		$value['line'] = ( !isset( $value['line'] ) ) ? '' : $value['line'];
 		$value['file'] = ( !isset( $value['file'] ) ) ? '' : $value['file'];
 	        $sb->append("</td></tr><tr><td width=\"25\">&nbsp;</td><td>");
-	        $sb->append( "\tat ".$value['class'].$value['type'].$value['function']." ( ".Japha::getQualified( $value['file'] ).":".$value['line'].")<br/>");
+	        $sb->append( "\tat ".$value['class'].$value['type'].$value['function']." ( ".Japha::getQualified( $value['file'] ).":".$value['line']." )<br/>");
 	    }
 	    $sb->append("</tr></table>");
 	    return $sb;

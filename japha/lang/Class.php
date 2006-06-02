@@ -133,12 +133,16 @@ class _Class extends Object
 	
 	public function getName()
 	{
+		if( is_string( $this->_class ) )
+		{
+			return $this->_class;
+		}
 		return get_class( $this->_class );
 	}
 	
 	public function getSuperClass()
 	{
-		return get_parent_class( $this->_class );
+		return _Class::forName( get_parent_class( $this->_class ) );
 	}
 	
 	public function isArray()
@@ -148,7 +152,12 @@ class _Class extends Object
 	
 	public function isAssignableFrom( _Class $cls )
 	{
-		if($this->isInstance($cls))
+		try
+		{
+			$clzz = $cls->newInstance();
+		}
+		catch( Exception $e ){ return false; }
+		if( $this->isInstance( $clzz ) )
 		{
 			return true;
 		}
@@ -157,9 +166,12 @@ class _Class extends Object
 	
 	public function isInstance( Object $obj )
 	{
-		// I HATE TEMPORARY VARIABLES!!!
 		$className = $obj->getClass()->getName();
-		if($this->_class instanceof $className)
+		if( is_string( $this->_class ) )
+		{
+			return is_subclass_of( $obj, get_parent_class( $this->_class ) );
+		}
+		if( $inst instanceof $className )
 		{
 			return true;
 		}
@@ -186,7 +198,14 @@ class _Class extends Object
 	
 	public function newInstance()
 	{
-		return new $this->reflection->getName( $this->_class->toString() );
+		if( is_string( $this->_class ) )
+		{
+			$rflc = new ReflectionClass( $this->_class );
+			if( $rflc->isAbstract() )
+				throw new Exception('Cannot instantiate abstract class '.$this->_class.'!');
+			return new $this->_class;
+		}
+		return new $this->_class->getName();
 	}
 	
 	public function toString()
@@ -217,7 +236,12 @@ class _Class extends Object
 	public function get_ClassLoader(){}
 	public function getComponentType(){}
 	public function getDeclaredMethod( String $name, _Class $parameterTypes ){}
-	public function getDeclaredMethods(){}
+	
+	public function getDeclaredMethods()
+	{
+		return $this->getMethods();
+	}
+	
 	public function getDeclaring_Class(){}	
 	public function getPackage(){}
 	public function getProtectionDomain(){}

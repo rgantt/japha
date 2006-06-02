@@ -59,8 +59,8 @@ class Object extends Exception
      */
     public final function getClass()
     {
-        return new _Class( $this );
-		//return new ReflectionClass( get_class( $this ) );
+	    return new _Class( $this );
+	    //return new ReflectionClass( get_class( $this ) );
     }
 
     /**
@@ -127,9 +127,9 @@ class Object extends Exception
      */
     public function finalize(){}
     
-    static function initStaticClass()
+    static function initStaticClass( $name = '' )
     {
-        self::$class = new _Class( $this );   
+        self::$class = new $name;
     }
 }
 ?>
