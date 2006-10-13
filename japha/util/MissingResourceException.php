@@ -9,7 +9,7 @@ package("japha.util");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.2 $
  */
-class MissingResourceException extends RuntimeException
+class MissingResourceException extends _RuntimeException
 {
     private $s;
     private $className;

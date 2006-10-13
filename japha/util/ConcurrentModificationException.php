@@ -26,7 +26,7 @@ package("japha.util");
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.1 $
  */
-class ConcurrentModificationException extends RuntimeException
+class ConcurrentModificationException extends _RuntimeException
 {
     public function __construct()
     {

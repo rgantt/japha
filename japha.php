@@ -74,7 +74,7 @@ class Japha
         "japha.lang.Throwable",
         "japha.lang.Error",
         "japha.lang.Exception",
-        "japha.lang.RuntimeException",
+        "japha.lang._RuntimeException",
         "japha.lang.System"
     );
     

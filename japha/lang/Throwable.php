@@ -74,7 +74,7 @@ import("japha.io.Serializable");
  * mechanism, while continuing to implement their "legacy" chaining mechanisms for compatibility. 
  *
  * Further, as of release 1.4, many general purpose Throwable classes (for example Exception, 
- * RuntimeException, Error) have been retrofitted with constructors that take a cause. This 
+ * _RuntimeException, Error) have been retrofitted with constructors that take a cause. This 
  * was not strictly necessary, due to the existence of the initCause method, but it is more 
  * convenient and expressive to delegate to a constructor that takes a cause. 
  *
