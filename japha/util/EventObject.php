@@ -14,7 +14,7 @@ import("japha.io.Serializable");
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.2 $
  */
-class EventObject extends Object implements Serializable
+class EventObject extends Object implements _Serializable
 {
     /**
      * The object on which the Event initially occurred.

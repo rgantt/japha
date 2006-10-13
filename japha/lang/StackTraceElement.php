@@ -14,7 +14,7 @@ import("japha.lang.Object");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.3 $
  */
-class StackTraceElement extends Object implements Serializable
+class StackTraceElement extends Object implements _Serializable
 {
 	public function equals( Object $obj ){}
 	public function getClassName(){}

@@ -10,7 +10,7 @@ import("japha.io.Serializable");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:03 $
  */
-abstract class PermissionCollection extends Object implements Serializable
+abstract class PermissionCollection extends Object implements _Serializable
 {
 	private $collection;
 	private $readOnly = false;

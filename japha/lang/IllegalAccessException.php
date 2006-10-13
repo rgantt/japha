@@ -11,7 +11,7 @@ package("japha.lang");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.1 $
  */
-class IllegalAccessException extends Exception implements Serializable
+class IllegalAccessException extends Exception implements _Serializable
 {
     public function __construct( $message=null )
     {

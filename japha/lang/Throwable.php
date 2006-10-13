@@ -93,7 +93,7 @@ import("japha.io.Serializable");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.10 $
  */
-class Throwable extends Object implements Serializable
+class Throwable extends Object implements _Serializable
 {
     /**
      * A short description of the exception and what caused it

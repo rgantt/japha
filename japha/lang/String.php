@@ -68,7 +68,7 @@ import("japha.util.Locale");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.2 $
  */
-class String extends Object implements Serializable//, Comparable, CharSequence
+class String extends Object implements _Serializable//, Comparable, CharSequence
 {
     /** The value is used for character storage. */
     private $value =array();

@@ -22,7 +22,7 @@ import("japha.security.PermissionCollection");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.4 $
  */
-abstract class BasicPermission extends Permission implements Serializable
+abstract class BasicPermission extends Permission implements _Serializable
 {
     /**
      * Constructor

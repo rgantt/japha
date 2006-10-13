@@ -51,7 +51,7 @@ package("japha.util");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.2 $
  */
-class Date extends Object implements Serializable, Cloneable, Comparable
+class Date extends Object implements _Serializable, Cloneable, Comparable
 {
     /**
      * Japha-style constructor

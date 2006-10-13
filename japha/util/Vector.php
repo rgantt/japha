@@ -45,7 +45,7 @@ import("japha.io.Serializable");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.9 $ $Date: 2004/07/30 23:33:41 $
  */
-class Vector extends AbstractList implements PList, RandomAccess, Cloneable, Serializable
+class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Serializable
 {	
     protected $capacityIncrement;
     protected $elementCount;

@@ -10,7 +10,7 @@ import("japha.io.Serializable");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.3 $
  */
-abstract class HttpServlet extends GenericServlet implements Serializable
+abstract class HttpServlet extends GenericServlet implements _Serializable
 {
 	abstract protected function doDelete( HttpServletRequest $req, HttpServletResponse $resp );
 	abstract protected function doGet( HttpServletRequest $req, HttpServletResponse $resp );
