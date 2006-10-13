@@ -76,7 +76,7 @@ abstract class Database extends Object
 
 interface SQL
 {
-	public function connect( Address $host="", $user="", $pass="" );
+	public function connect( $host="", $user="", $pass="" );
 	public function select_db( $dbName );
 	public function query( $queryString );
 	public function close();
