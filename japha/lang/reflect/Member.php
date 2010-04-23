@@ -12,8 +12,8 @@ interface Member
 	const IS_DECLARED = "No";
 	const IS_PUBLIC = "No";
 	
-	abstract public function getDeclaringClass();
-	abstract public function getModifiers();
-	abstract public function getName();
+	public function getDeclaringClass();
+	public function getModifiers();
+	public function getName();
 }
 ?>
