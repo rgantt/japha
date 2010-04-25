@@ -62,7 +62,7 @@ import("japha.io.Serializable");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.7 $
  */
-class HashMap extends AbstractMap implements Cloneable, Map, Serializable
+abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializable
 {
     public function __construct()
     {

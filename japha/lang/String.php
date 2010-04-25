@@ -360,7 +360,7 @@ class String extends Object implements _Serializable//, Comparable, CharSequence
      * @see     java.lang.String#compareTo(java.lang.String)
      * @see     java.lang.String#equalsIgnoreCase(java.lang.String)
      */
-     public function equals( Object $anObject ) 
+     public function equals( $anObject ) 
      {
          if ( $this == $anObject ) 
          {
@@ -368,24 +368,24 @@ class String extends Object implements _Serializable//, Comparable, CharSequence
          }
          if ( $anObject instanceof String ) 
          {
-		 return $anObject->toString() == $this->toString();
-             $anotherString = $anObject;
-             $n = $this->count;
-             if ( $n == $anotherString->count ) 
-             {
-                 $v1 = $value;
-                 $v2 = $anotherString->value;
-                 $i = $offset;
-                 $j = $anotherString->offset;
-                 while ( $n-- != 0 ) 
-                 {
-                     if ( $v1[ $i++ ] != $v2[ $j++ ] )
-                     return false;
-                 }
-                 return true;
-             }
+		 	return $anObject->toString() == $this->toString();
+            $anotherString = $anObject;
+            $n = $this->count;
+            if ( $n == $anotherString->count ) 
+            {
+                $v1 = $value;
+                $v2 = $anotherString->value;
+                $i = $offset;
+                $j = $anotherString->offset;
+                while ( $n-- != 0 ) 
+                {
+                    if ( $v1[ $i++ ] != $v2[ $j++ ] )
+                    return false;
+                }
+                return true;
+            }
          }
-         return false;
+         return $this === $anObject;
      }
 
     /**

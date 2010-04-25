@@ -14,7 +14,7 @@ import("japha.io.FileNameFilter");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.4 $
  */
-class File extends Object implements Comparable, Serializable
+abstract class File extends Object implements Comparable, Serializable
 {
     static $pathSeparator = "/";
     static $pathSeparatorChar = '/';

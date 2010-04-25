@@ -68,10 +68,10 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
         $argv = func_get_args();
         switch( func_num_args() )
         {
-            case 1:
-                return $this->addAll0( $argv[0] );
-                break;   
-        }   
+	           case 1:
+               	return $this->addAll0( $argv[0] );
+               	break;   
+        }
     }
     
     /**
@@ -107,14 +107,28 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
      *
      * @access public
      */
-    public function addAll0( Collection $collection )
+    public function addAll0( $collection )
     {
-    	$it = $collection->iterator();
-    	while( $it->hasNext() )
+    	if( is_array( $collection ) )
     	{
-    		$this->add( $it->current() );
-    		$it->next();	
+    		foreach( $collection as $key )
+    		{
+    			$this->add( $key );
+    		}
+    		return;
+    	} 
+    	if( $collection instanceof Collection )
+    	{
+    		$it = $collection->iterator();
+    		while( $it->hasNext() )
+    		{
+	    		$this->add( $it->current() );
+    			$it->next();	
+    		}
+    		return;
     	}
+    	throw new Exception("Argument neither array nor collection");
+    	//throw new IllegalArgumentException("Argument neither array nor collection");
     }
     
     /**
@@ -328,7 +342,7 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
 		{
 			if( $it->current()->equals( $object ) )
 			{
-				return true;	
+				return true;
 			}	
 			$it->next();
 		}
@@ -356,14 +370,7 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
 	 */
 	public function size()
 	{
-		$it = $this->iterator();
-		$count = 0;
-		while( $it->hasNext() )
-		{
-			$count++;
-			$it->next();
-		}
-		return $count;
+		return count( $this->list );
 	}
 	
 	/**
@@ -447,18 +454,19 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
 	 */
 	public function containsAll( Collection $collection )
 	{
-		$c = $j = 0;
-		$it = $this->iterator();
 		$ct = $collection->iterator();
-		while( $it->hasNext() )
+		while( $ct->hasNext() )
 		{
-			$j++;
-			if( $it->current()->equals( $ct->current() ) )
+			if( !$this->contains( $ct->current() ) )
 			{
-				$c++;	
-			}	
+				echo 'not in there :(';
+				return false;
+			}
+			echo 'its in there!';
+			$ct->next();
 		}
-		return ( $c == $j ) ? true : false;
+		echo 'shits true';
+		return true;
 	}
 }
 ?>

@@ -44,7 +44,7 @@ import("com.japha.iterator.SetIterator");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.5 $
  */
-class HashSet extends AbstractSet implements Cloneable, Serializable, Set
+abstract class HashSet extends AbstractSet implements Cloneable, Serializable, Set
 {
     public function __construct()
     {

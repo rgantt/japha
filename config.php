@@ -17,10 +17,8 @@
  * @type String[]
  */
 $classpath = array(
-    "C:/htdocs/japha3",
-    "C:/htdocs/intake",
-    'C:/htdocs/blargon3',
-    "C:/htdocs/jpunit",
-    "C:/htdocs/"
+    "d:/wamp/www/japha3",
+    "d:/wamp/www/jpunit",
+    "d:/wamp/www"
 );
 ?>

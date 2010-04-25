@@ -399,13 +399,12 @@ abstract class AbstractList extends Object implements Collection, PList
     public function remove( $index )
     {
 		$temp = $this->list[$index];
-		unset($this->list[$index]);
-        for(; $index < count($this->list); $index++)
+        for(; $index < count($this->list) - 1; $index++)
 		{
-        	$this->list[$index + 1] = $this->list[$index];
+        	$this->list[$index] = $this->list[$index + 1];
 			++$this->modCount;
 		}
-		$this->bubbleSortInternalList();
+		//$this->bubbleSortInternalList();
         return $temp;
     }
 

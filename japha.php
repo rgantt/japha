@@ -74,7 +74,7 @@ class Japha
         "japha.lang.Throwable",
         "japha.lang.Error",
         "japha.lang.Exception",
-        "japha.lang._RuntimeException",
+        "japha.lang.RuntimeException",
         "japha.lang.System"
     );
     
@@ -290,7 +290,7 @@ class Japha
         }
         while( false !== ( $entry = $d->read() ) )
         {
-            if( !ereg( "^\.", $entry ) && substr( $entry, -4, 4 ) == ".php" )
+            if( !preg_match( '/^\./', $entry ) && substr( $entry, -4, 4 ) == ".php" )
             {
                 $qualifiedName = $qualifiedPackage."/".$entry;
                 $qualifiedName = str_replace( ".php", "", $qualifiedName );

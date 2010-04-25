@@ -43,7 +43,7 @@ import("japha.util.ConcurrentModificationException");
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision: 1.5 $
  */
-class LinkedList extends AbstractSequentialList implements PList, Cloneable, Serializable
+abstract class LinkedList extends AbstractSequentialList implements PList, Cloneable, Serializable
 {
     /**
      * The size of the Linked List
