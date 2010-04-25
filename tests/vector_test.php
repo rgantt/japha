@@ -5,6 +5,15 @@ import('jpunit.framework.TestCase');
 import('jpunit.framework.Assert');
 import('jpunit.ui.textui.TestRunner');
 
+import('japha.util.Vector');
+
+/**
+ * Unit tests for Vector class. 
+ * 
+ * @author bsdlite
+ * $Id$
+ */
+
 class VectorTest extends TestCase
 {
 	private $v1;
