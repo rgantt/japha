@@ -2,13 +2,13 @@
 package("org.xml.sax");
 
 /**
- * $Id: Xml.php,v 1.3 2004/07/14 22:27:05 japha Exp $
+ * $Id$
  *
  * The purpose of the XML interface is to define guidelines for child classes, so that we can have unity
  * whether we are working with the SAX or the DOM.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:05 $
+ * @version $Revision$ $Date$
  */
 interface XML
 {

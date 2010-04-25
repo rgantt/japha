@@ -5,10 +5,10 @@ import("japha.lang.Object");
 import("japha.util.Collection");
 
 /** 
- * $Id: AbstractCollection.php,v 1.7 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 abstract class AbstractCollection extends Object implements Collection
 {

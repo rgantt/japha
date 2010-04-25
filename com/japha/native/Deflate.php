@@ -5,13 +5,13 @@ import("japha.lang.Object");
 import("japha.io.*");
 
 /**
- * $Id: Deflate.php,v 1.2 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Includes Japha io package:
  * Reader, Writer, IoReaderWrapper, IoWriterWrapper -- { true === ($we == need($this)) }
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 class LinkedFiles extends Object
 {

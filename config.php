@@ -1,11 +1,11 @@
 <?
 /**
- * $Id: config.php,v 1.5 2005/06/16 16:04:39 japha Exp $
+ * $Id$
  *
  * Japha configuration directives. The only required directive is the the classpath.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 
 /**
@@ -17,7 +17,7 @@
  * @type String[]
  */
 $classpath = array(
-    "d:/wamp/www/japha3",
+    "d:/wamp/www/japha",
     "d:/wamp/www/jpunit",
     "d:/wamp/www"
 );

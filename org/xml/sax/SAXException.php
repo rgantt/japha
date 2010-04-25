@@ -2,10 +2,10 @@
 package("org.xml.sax");
 
 /** 
- * $Id: SAXException.php,v 1.4 2004/07/15 18:14:59 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 class SAXException extends Exception
 {

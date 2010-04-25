@@ -2,14 +2,14 @@
 package("japhax.sql");
 
 /**
- * $Id: Database.php,v 1.5 2004/11/28 08:52:12 japha Exp $
+ * $Id$
  *
  * Base class for all database layers. Contains all of the methods necessary for overloading 
  * the class. Provides methods for getting and setting the linkId to different connections, 
  * but you should never have to use them exception in a bind.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/11/28 08:52:12 $
+ * @version $Revision$ $Date$
  */
 abstract class Database extends Object
 {

@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.io.OutputStream");
 
 /**
- * $Id: FilterOutputStream.php,v 1.5 2004/07/27 20:26:55 japha Exp $
+ * $Id$
  *
  * This class is the superclass of all classes that filter output streams. 
  * These streams sit on top of an already existing output stream (the underlying output stream) 
@@ -17,7 +17,7 @@ import("japha.io.OutputStream");
  * additional methods and fields. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/07/27 20:26:55 $
+ * @version $Revision$ $Date$
  */
 class FilterOutputStream extends OutputStream
 {

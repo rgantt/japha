@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Comparable.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * This interface imposes a total ordering on the objects of each class that implements it. 
  * This ordering is referred to as the class's natural ordering, and the class's compareTo 
@@ -54,7 +54,7 @@ package("japha.lang");
  * {(x, y) such that x.equals((Object)y)}.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 interface Comparable
 {

@@ -4,7 +4,7 @@ package("com.japha.iterator");
 import("japha.lang.Iterator");
 
 /**
- * $Id: DirectoryIterator.php,v 1.2 2004/07/14 22:27:02 japha Exp $
+ * $Id$
  *
  * Class <code>DirectoryIterator</code> provides a simple iterator for traversing the
  * files in a directory.
@@ -42,7 +42,7 @@ import("japha.lang.Iterator");
  * </p>
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:02 $
+ * @version $Revision$ $Date$
  */
 class DirectoryIterator //extends Iterator
 {

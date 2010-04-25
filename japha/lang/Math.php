@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Math.php,v 1.4 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * The class Math contains methods for performing basic numeric operations such as the elementary 
  * exponential, logarithm, square root, and trigonometric functions.
@@ -35,7 +35,7 @@ package("japha.lang");
  * automatically meet the monotonicity requirements. 
  * 
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/19 17:28:43 $
+ * @version $Revision$ $Date$
  */
 class Math extends Object
 {

@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.io.InputStreamReader");
 
 /**
- * $Id: FileReader.php,v 1.4 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Convenience class for reading character files. The constructors of this class assume that 
  * the default character encoding and the default byte-buffer size are appropriate. To specify 
@@ -14,7 +14,7 @@ import("japha.io.InputStreamReader");
  * consider using a FileInputStream. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 class FileReader extends InputStreamReader
 {

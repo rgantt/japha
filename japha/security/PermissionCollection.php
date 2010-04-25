@@ -5,10 +5,10 @@ import("japha.lang.Object");
 import("japha.io.Serializable");
 
 /**
- * $Id: PermissionCollection.php,v 1.3 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 abstract class PermissionCollection extends Object implements _Serializable
 {

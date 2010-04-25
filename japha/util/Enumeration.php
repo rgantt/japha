@@ -2,7 +2,7 @@
 package("japha.util");
 
 /**
- * $Id: Enumeration.php,v 1.4 2004/07/22 16:40:05 japha Exp $
+ * $Id$
  *
  * An object that implements the Enumeration interface generates a series of elements, one at a time. Successive calls to 
  * the nextElement method return successive elements of the series.
@@ -22,7 +22,7 @@ package("japha.util");
  * preference to Enumeration. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/22 16:40:05 $
+ * @version $Revision$ $Date$
  */
 interface Enumeration
 {

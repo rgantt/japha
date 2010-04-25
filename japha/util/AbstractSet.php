@@ -5,7 +5,7 @@ import("japha.util.AbstractCollection");
 import("japha.util.Set");
 
 /** 
- * $Id: AbstractSet.php,v 1.5 2004/08/25 21:49:33 japha Exp $
+ * $Id$
  *
  * This class provides a skeletal implementation of the Set interface to minimize the effort required to implement 
  * this interface.
@@ -21,7 +21,7 @@ import("japha.util.Set");
  * This class is a member of the Java Collections Framework. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 abstract class AbstractSet extends AbstractCollection implements Set
 {

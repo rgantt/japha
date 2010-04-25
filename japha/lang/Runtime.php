@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Runtime.php,v 1.7 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * Every Java application has a single instance of class Runtime that allows the application to interface 
  * with the environment in which the application is running. The current runtime can be obtained from the getRuntime method.
@@ -10,7 +10,7 @@ package("japha.lang");
  * An application cannot create its own instance of this class. 
  * 
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 class Runtime extends Object
 {

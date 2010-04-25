@@ -4,7 +4,7 @@ package("japha.lang");
 import("japha.io.Serializable");
 
 /**
- * $Id: Throwable.php,v 1.10 2004/08/25 21:50:21 japha Exp $
+ * $Id$
  *
  * The Throwable class is the superclass of all errors and exceptions in the Java language. 
  * Only objects that are instances of this class (or one of its subclasses) are thrown by 
@@ -91,7 +91,7 @@ import("japha.io.Serializable");
  * operate properly on a throwable that was obtained by deserialization. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.10 $
+ * @version $Revision$
  */
 class Throwable extends Object implements _Serializable
 {

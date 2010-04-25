@@ -2,10 +2,10 @@
 package("org.xml.sax");
 
 /**
- * $Id: Attributes.php,v 1.2 2004/07/30 23:33:41 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 interface Attributes
 {

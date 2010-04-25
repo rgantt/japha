@@ -4,7 +4,7 @@ package("org.xml.sax");
 import("org.xml.sax.Xml");
 
 /**
- * $Id: XMLReader.php,v 1.4 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * Defines the guidelines that all XML parsing classes must follow.
  *
@@ -13,7 +13,7 @@ import("org.xml.sax.Xml");
  * character data within those tags, until E.O.F. is reached.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 abstract class XmlParser extends Object implements XML
 {

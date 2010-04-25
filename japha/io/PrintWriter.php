@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.io.Writer");
 
 /**
- * $Id: PrintWriter.php,v 1.4 2004/07/27 20:26:55 japha Exp $
+ * $Id$
  *
  * Print formatted representations of objects to a text-output stream. This class implements all of the print methods 
  * found in PrintStream. It does not contain methods for writing raw bytes, for which a program should use unencoded 
@@ -18,7 +18,7 @@ import("japha.io.Writer");
  * invoking checkError(). 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 class PrintWriter extends Writer
 {

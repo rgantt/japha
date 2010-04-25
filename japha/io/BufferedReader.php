@@ -4,10 +4,10 @@ package("japha.io");
 import('japha.io.Reader');
 
 /**
- * $Id: BufferedReader.php,v 1.3 2005/06/16 16:04:50 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class BufferedReader extends Reader
 {

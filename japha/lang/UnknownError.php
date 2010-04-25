@@ -4,14 +4,14 @@ package("japha.lang");
 import("japha.lang.VirtualMachineError");
 
 /**
- * $Id: UnknownError.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * Thrown when an unknown but serious exception has occurred in the Java Virtual Machine. 
  *
  * @deprecated For now, because we aren't using a Virtual Machine
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class UnknownError extends VirtualMachineError
 {

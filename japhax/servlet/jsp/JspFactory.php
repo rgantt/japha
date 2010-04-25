@@ -2,7 +2,7 @@
 package("japhax.servlet.jsp");
 
 /**
- * $Id: JspFactory.php,v 1.3 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * The JspFactory is an abstract class that defines a number of factory methods available to a 
  * JSP page at runtime for the purposes of creating instances of various interfaces and classes 
@@ -19,7 +19,7 @@ package("japhax.servlet.jsp");
  * JspFactory objects should not be used by JSP page authors. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 abstract class JspFactory extends Object
 {

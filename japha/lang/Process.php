@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Process.php,v 1.4 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * The Runtime.exec methods create a native process and return an instance of a subclass of Process that can be used 
  * to control the process and obtain information about it. The class Process provides methods for performing 
@@ -25,7 +25,7 @@ package("japha.lang");
  * or concurrently with respect to the Java process that owns the Process object. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 abstract class Process extends Object
 {

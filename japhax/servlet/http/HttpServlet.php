@@ -5,10 +5,10 @@ import("japhax.servlet.GenericServlet");
 import("japha.io.Serializable");
 
 /** 
- * $Id: HttpServlet.php,v 1.3 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 abstract class HttpServlet extends GenericServlet implements _Serializable
 {

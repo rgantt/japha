@@ -2,7 +2,7 @@
 package("japha.net");
 
 /**
- * $Id: Address.php,v 1.2 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Note: This is like the URL or URI class in Java
  * It will soon be replaced by a tighter port of the latter
@@ -11,7 +11,7 @@ package("japha.net");
  * The format on the address can be any that is supported by the web: ex// ftp, http, https, etc.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 class Address extends Object
 {

@@ -4,7 +4,7 @@ package("japha.lang");
 import("japha.security.BasicPermission");
 
 /**
- * $Id: RuntimePermission.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * Note: The japha implementation does not support Permission wildcards as of yet. Ex// new RuntimePermission("*Thread") <- WILL NOT WORK
  * This class is for runtime permissions. A RuntimePermission contains a name (also referred to as a "target name") but no 
@@ -15,7 +15,7 @@ import("japha.security.BasicPermission");
  * wildcard match. For example: "loadLibrary.*" or "*" is valid, "*loadLibrary" or "a*b" is not valid. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class RuntimePermission extends BasicPermission
 {

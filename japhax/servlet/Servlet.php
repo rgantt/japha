@@ -2,7 +2,7 @@
 package("japhax.servlet");
 
 /**
- * $Id: Servlet.php,v 1.2 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * To implement this interface, you can write a generic servlet that extends 
  * javax.servlet.GenericServlet or an HTTP servlet that extends javax.servlet.http.HttpServlet. 
@@ -21,7 +21,7 @@ package("japhax.servlet");
  * and copyright.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface Servlet
 {

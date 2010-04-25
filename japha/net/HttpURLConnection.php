@@ -4,14 +4,14 @@ package("japha.net");
 import("japhax.servlet.http.HttpServletRequest");
 
 /**
- * $Id: HttpURLConnection.php,v 1.4 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * This class is the interface to all the requests of the http protocol.
  * Most of the work is actually done by PHP to setup the variables, so this
  * class is just an interface to that PHP layer.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  * @based on a class by Dan Allen
  */
 class HttpURLConnection extends Object implements HttpServletRequest

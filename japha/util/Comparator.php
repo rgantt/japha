@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.lang.Object");
 
 /**
- * $Id: Comparator.php,v 1.2 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * A comparison function, which imposes a total ordering on some collection of objects. Comparators 
  * can be passed to a sort method (such as Collections.sort) to allow precise control over the 
@@ -52,7 +52,7 @@ import("japha.lang.Object");
  *      {(x, y) such that x.equals((Object)y)}.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface Comparator
 {

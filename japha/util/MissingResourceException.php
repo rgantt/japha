@@ -2,12 +2,12 @@
 package("japha.util");
 
 /**
- * $Id: MissingResourceException.php,v 1.2 2004/07/22 17:46:58 japha Exp $
+ * $Id$
  *
  * Signals that a resource is missing.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 class MissingResourceException extends _RuntimeException
 {

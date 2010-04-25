@@ -5,7 +5,7 @@ import("japha.lang.Object");
 import("japha.util.AbstractList");
 
 /**
- * $Id: AbstractSequentialList.php,v 1.4 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * This class provides a skeletal implementation of the List interface to minimize the effort 
  * required to implement this interface backed by a "sequential access" data store (such as a 
@@ -29,7 +29,7 @@ import("japha.util.AbstractList");
  * per the recommendation in the Collection interface specification. 
  * 
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/23 17:51:15 $
+ * @version $Revision$ $Date$
  */
 abstract class AbstractSequentialList extends AbstractList
 {

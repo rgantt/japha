@@ -2,12 +2,12 @@
 package("com.japha.native");
 
 /**
- * $Id: Inflate.php,v 1.2 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Takes two files and mashes them together, with no compression. Analogous to the tar format.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 class Melder extends Object
 {

@@ -4,7 +4,7 @@ package("japhax.swing");
 import("japhax.swing.PTextComponent");
 
 /**
- * $Id: PLabel.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * A display area for a short text string or an image, or both. A label does not react to input events. 
  * As a result, it cannot get the keyboard focus. A label can, however, display a keyboard alternative 
@@ -31,7 +31,7 @@ import("japhax.swing.PTextComponent");
  * been added to the java.beans package. Please see XMLEncoder. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 class PLabel extends PTextComponent
 {

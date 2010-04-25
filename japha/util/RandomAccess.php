@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.lang.Object");
 
 /**
- * $Id: RandomAccess.php,v 1.2 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * Marker interface used by List implementations to indicate that they support fast (generally 
  * constant time) random access. The primary purpose of this interface is to allow generic 
@@ -33,7 +33,7 @@ import("japha.lang.Object");
  *        i.next();
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface RandomAccess
 {

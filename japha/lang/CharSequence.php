@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: CharSequence.php,v 1.3 2004/07/19 17:28:42 japha Exp $
+ * $Id$
  *
  * A CharSequence is a readable sequence of characters. 
  * This interface provides uniform, read-only access to many different kinds of character sequences. 
@@ -14,7 +14,7 @@ package("japha.lang");
  * in a map. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 interface CharSequence
 {

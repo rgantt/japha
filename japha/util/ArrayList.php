@@ -8,7 +8,7 @@ import("japha.util.RandomAccess");
 import("japha.io.Serializable");
 
 /** 
- * $Id: ArrayList.php,v 1.6 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * Resizable-array implementation of the List interface. Implements all optional list operations, and permits all 
  * elements, including null. In addition to implementing the List interface, this class provides methods to manipulate 
@@ -51,7 +51,7 @@ import("japha.io.Serializable");
  * This class is a member of the Japha Collections Framework. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $
+ * @version $Revision$
  */
 class ArrayList extends AbstractList implements PList, RandomAccess, Cloneable, _Serializable
 {

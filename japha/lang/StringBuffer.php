@@ -4,7 +4,7 @@ package("japha.lang");
 import("japha.lang.CharSequence");
 
 /**
- * $Id: StringBuffer.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * This needs to be reimplemented to accept a numeric constructor parameter (overload the constructor)
  * Also needs to:
@@ -19,7 +19,7 @@ import("japha.lang.CharSequence");
  * that buffer.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class StringBuffer extends Object implements CharSequence
 {

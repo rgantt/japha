@@ -5,7 +5,7 @@ import("japha.util.AbstractSequentialList");
 import("japha.util.ConcurrentModificationException");
 
 /**
- * $Id: LinkedList.php,v 1.5 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * Linked list implementation of the List interface. Implements all optional list operations, and permits all elements
  * (including null). In addition to implementing the List interface, the LinkedList class provides uniformly named
@@ -41,7 +41,7 @@ import("japha.util.ConcurrentModificationException");
  * This class is a member of the Japha Collections Framework.
  *
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 abstract class LinkedList extends AbstractSequentialList implements PList, Cloneable, Serializable
 {

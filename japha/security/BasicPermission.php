@@ -5,7 +5,7 @@ import("japha.security.Permission");
 import("japha.security.PermissionCollection");
 
 /**
- * $Id: BasicPermission.php,v 1.4 2004/07/19 18:21:19 japha Exp $
+ * $Id$
  *
  * The BasicPermission class extends the Permission class, and can be used as the base class for permissions 
  * that want to follow the same naming convention as BasicPermission.
@@ -20,7 +20,7 @@ import("japha.security.PermissionCollection");
  * permission or you don't.) Subclasses may implement actions on top of BasicPermission, if desired. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 abstract class BasicPermission extends Permission implements _Serializable
 {

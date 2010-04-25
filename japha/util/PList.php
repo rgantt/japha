@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.util.Collection");
 
 /**
- * $Id: PList.php,v 1.6 2004/07/22 17:46:58 japha Exp $
+ * $Id$
  *
  * An ordered collection (also known as a sequence). The user of this interface has 
  * precise control over where in the list each element is inserted. The user can access 
@@ -59,7 +59,7 @@ import("japha.util.Collection");
  * specification for this interface. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/07/22 17:46:58 $
+ * @version $Revision$ $Date$
  */
 interface PList extends Collection
 {

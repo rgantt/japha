@@ -2,13 +2,13 @@
 package("japha.util");
 
 /**
- * $Id: Iterator.php,v 1.3 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * <code>abstract class Iterator</code>
  * This class will be inherited by various child iterators.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 abstract class _Iterator extends Object
 {

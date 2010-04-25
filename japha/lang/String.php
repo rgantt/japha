@@ -15,7 +15,7 @@ import("japha.util.Locale");
 //import("java.util.regex.PatternSyntaxException");
 
 /**
- * $Id: String.php,v 1.2 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * The <code>String</code> class represents character strings. All
  * string literals in Java programs, such as <code>"abc"</code>, are
@@ -66,7 +66,7 @@ import("japha.util.Locale");
  * thrown.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 class String extends Object implements _Serializable//, Comparable, CharSequence
 {

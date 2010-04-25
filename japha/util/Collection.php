@@ -2,7 +2,7 @@
 package("japha.util");
 
 /**
- * $Id: Collection.php,v 1.6 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * The root interface in the collection hierarchy. A collection represents a group of 
  * objects, known as its elements. Some collections allow duplicate elements and 
@@ -47,7 +47,7 @@ package("japha.util");
  * for this interface.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/07/23 17:51:15 $
+ * @version $Revision$ $Date$
  */
 interface Collection
 {

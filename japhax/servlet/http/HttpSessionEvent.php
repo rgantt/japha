@@ -4,10 +4,10 @@ package("japhax.servlet.http");
 import("japha.util.EventObject");
 
 /** 
- * $Id: HttpSessionEvent.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 class HttpSessionEvent extends EventObject
 {

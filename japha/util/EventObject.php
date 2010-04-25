@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.io.Serializable");
 
 /**
- * $Id: EventObject.php,v 1.2 2004/07/22 16:40:05 japha Exp $
+ * $Id$
  *
  * The root class from which all event state objects shall be derived.
  *
@@ -12,7 +12,7 @@ import("japha.io.Serializable");
  * upon which the Event in question initially occurred upon.
  *
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 class EventObject extends Object implements _Serializable
 {

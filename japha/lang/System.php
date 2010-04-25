@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
-* $Id: System.php,v 1.12 2004/07/27 20:26:56 japha Exp $
+* $Id$
 *
 * The System class contains several useful class fields and methods. It cannot be instantiated.
 *
@@ -13,7 +13,7 @@ package("japha.lang");
 * @deprecated For now, because this class is mostly useless without a virtual machine/garbage collector
 *
 * @author Ryan Gantt
-* @version $Revision: 1.12 $
+* @version $Revision$
 */
 class System //extends Object
 {

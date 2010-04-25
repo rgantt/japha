@@ -4,7 +4,7 @@ package("japhax.sql");
 import("japhax.sql.EventListener");
 
 /**
- * $Id: RowSetListener.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * An interface that must be implemented by a component that wants to be notified when a significant 
  * event happens in the life of a RowSet object. A component becomes a listener by being registered 
@@ -12,7 +12,7 @@ import("japhax.sql.EventListener");
  * implements this interface determines what it does when it is notified of an event. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface RowSetListener extends EventListener
 {

@@ -2,10 +2,10 @@
 package("japha.lang.reflect");
 
 /**
- * $Id: Modifier.php,v 1.5 2004/07/27 07:58:26 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 class Modifier extends Object
 {

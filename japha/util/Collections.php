@@ -9,7 +9,7 @@ import("japha.util.Comparator");
 import("japha.util.Enumeration");
 
 /**
- * $Id: Collections.php,v 1.4 2004/07/22 17:46:58 japha Exp $
+ * $Id$
  *
  * This class consists exclusively of static methods that operate on or return collections. It 
  * contains polymorphic algorithms that operate on collections, "wrappers", which return a new 
@@ -32,7 +32,7 @@ import("japha.util.Enumeration");
  * list that is already sorted may or may not throw UnsupportedOperationException. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/22 17:46:58 $
+ * @version $Revision$ $Date$
  */
 class Collections extends Object
 {

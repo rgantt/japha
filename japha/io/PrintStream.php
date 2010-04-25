@@ -4,10 +4,10 @@ package("japha.io");
 import("japha.io.FilterOutputStream");
 
 /**
- * $Id: PrintStream.php,v 1.4 2004/07/27 20:26:55 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/27 20:26:55 $
+ * @version $Revision$ $Date$
  */
 class PrintStream extends FilterOutputStream
 {

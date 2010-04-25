@@ -4,14 +4,14 @@ package("japhax.sql");
 import("japhax.sql.Database");
 
 /**
- * $Id: Mysql.php,v 1.4 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * This is the database layer that will definately see the most use throughout the users of the script.
  * It contains all of the major functions that php has for mysql databases, and should be more than
  * adequate for our needs
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 class MySQL extends Database implements SQL
 {

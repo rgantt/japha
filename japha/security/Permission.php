@@ -6,10 +6,10 @@ import("japha.io.Serializable");
 import("japha.security.Guard");
 
 /**
- * $Id: Permission.php,v 1.4 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 abstract class Permission extends Object implements Guard, Serializable
 {

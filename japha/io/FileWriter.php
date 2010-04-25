@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.io.InputStreamWriter");
 
 /**
- * $Id: FileWriter.php,v 1.4 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Convenience class for writing character files. The constructors of this class assume that the 
  * default character encoding and the default byte-buffer size are acceptable. To specify these 
@@ -19,7 +19,7 @@ import("japha.io.InputStreamWriter");
  * consider using a FileOutputStream.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 class FileWriter extends InputStreamWriter
 {

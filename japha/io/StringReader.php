@@ -4,12 +4,12 @@ package("japha.io");
 import("japha.io.Reader");
 
 /**
- * $Id: StringReader.php,v 1.1 2004/07/27 20:27:45 japha Exp $
+ * $Id$
  *
  * A character stream whose source is a string.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.1 $
+ * @version $Revision$
  */
 class StringReader extends Reader
 {

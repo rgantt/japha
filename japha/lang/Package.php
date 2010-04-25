@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Package.php,v 1.4 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * Package objects contain version information about the implementation and specification of a Java package. 
  * This versioning information is retrieved and made available by the ClassLoader instance that loaded the class(es). 
@@ -24,7 +24,7 @@ package("japha.lang");
  * package to be found by name or the set of all packages known to the current class loader to be found.
  *
  * @author <a href="mailto:gantt@cs.monana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 class Package extends Object
 {

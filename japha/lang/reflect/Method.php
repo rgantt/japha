@@ -5,12 +5,12 @@ import("japha.lang.reflect.Member");
 import("japha.lang.reflect.AccessibleObject");
 
 /**
- * $Id: Method.php,v 1.10 2004/11/28 09:41:01 japha Exp $
+ * $Id$
  *
  * This class is essentially just a wrapper to the PHP 5 built in ReflectionMethod class. It does, however, work.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.10 $
+ * @version $Revision$
  */
 final class Method extends AccessibleObject implements Member
 {

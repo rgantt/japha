@@ -2,10 +2,10 @@
 package("japhax.xml.parsers");
 
 /** 
- * $Id: SAXParser.php,v 1.3 2004/07/14 22:27:05 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class SaxParser extends Object
 {

@@ -2,10 +2,10 @@
 package("japha.servlet.http");
 
 /** 
- * $Id: HttpServletResponse.php,v 1.6 2004/11/28 09:41:04 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $
+ * @version $Revision$
  */
 interface HttpServletResponse
 {

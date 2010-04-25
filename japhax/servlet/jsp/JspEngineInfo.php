@@ -4,12 +4,12 @@ package("japhax.servlet.jsp");
 import("japha.lang.Object");
 
 /**
- * $Id: JspEngineInfo.php,v 1.3 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * The JspEngineInfo is an abstract class that provides information on the current JSP engine.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 abstract class JspEngineInfo extends Object
 {

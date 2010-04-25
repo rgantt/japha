@@ -2,7 +2,7 @@
 package("japha.util");
 
 /**
- * $Id: Date.php,v 1.2 2004/07/22 16:40:05 japha Exp $
+ * $Id$
  *
  * The class Date represents a specific instant in time, with millisecond precision.
  *
@@ -49,7 +49,7 @@ package("japha.util");
  * a date may be specified as January 32 and is interpreted as meaning February 1. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 class Date extends Object implements _Serializable, Cloneable, Comparable
 {

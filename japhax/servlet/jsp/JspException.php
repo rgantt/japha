@@ -4,13 +4,13 @@ package("japhax.servlet.jsp");
 import("japha.lang.Exception");
 
 /**
- * $Id: JspException.php,v 1.2 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * A generic exception known to the JSP engine; uncaught JspExceptions will result in an 
  * invocation of the errorpage machinery. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 class JspTagException extends Exception
 {

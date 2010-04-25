@@ -6,7 +6,7 @@ import('japha.util.Enumeration');
 import('japha.lang.StringBuffer');
 
 /**
- * $Id: StringTokenizer.php,v 1.6 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * The string tokenizer class allows an application to break a string into 
  * tokens. The tokenization method is much simpler than the one used by the 
@@ -35,7 +35,7 @@ import('japha.lang.StringBuffer');
  * create the StringTokenizer object. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 class StringTokenizer extends Object implements Enumeration
 {

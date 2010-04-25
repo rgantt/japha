@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.util.Collection");
 
 /** 
- * $Id: Set.php,v 1.3 2004/07/22 17:46:58 japha Exp $
+ * $Id$
  *
  * A collection that contains no duplicate elements. More formally, sets contain no pair of elements e1 and e2 such that 
  * e1.equals(e2), and at most one null element. As implied by its name, this interface models the mathematical set 
@@ -34,7 +34,7 @@ import("japha.util.Collection");
  * This interface is a member of the Japha Collections Framework.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 interface Set extends Collection
 {

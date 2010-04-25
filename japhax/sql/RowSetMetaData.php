@@ -4,7 +4,7 @@ package("japhax.sql");
 import("japha.sql.ResultSetMetaData");
 
 /**
- * $Id: RowSetMetaData.php,v 1.5 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * An object that contains information about the columns in a RowSet object. This interface is 
  * an extension of the ResultSetMetaData interface with methods for setting the values in a 
@@ -16,7 +16,7 @@ import("japha.sql.ResultSetMetaData");
  * RowSet.execute; an application programmer would not use them directly. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface RowSetMetaData extends ResultSetMetaData
 {

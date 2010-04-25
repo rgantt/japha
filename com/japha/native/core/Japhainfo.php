@@ -2,12 +2,12 @@
 package("com.japha.native.core");
 
 /**
- * $Id: Japhainfo.php,v 1.3 2004/07/15 22:36:00 japha Exp $
+ * $Id$
  *
  * Boo.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class JaphaInfo
 {

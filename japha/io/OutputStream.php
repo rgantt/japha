@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.lang.Object");
 
 /**
- * $Id: OutputStream.php,v 1.5 2004/07/27 20:26:55 japha Exp $
+ * $Id$
  *
  * This abstract class is the superclass of all classes representing an output stream of bytes. 
  * An output stream accepts output bytes and sends them to some sink. 
@@ -13,7 +13,7 @@ import("japha.lang.Object");
  * a method that writes one byte of output. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/07/27 20:26:55 $
+ * @version $Revision$ $Date$
  */
 abstract class OutputStream extends Object
 {

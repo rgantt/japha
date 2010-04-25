@@ -4,7 +4,7 @@ package("japhax.sql");
 import("japhax.sql.Database");
 
 /**
- * $Id: Access.php,v 1.4 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * Class Access provides a simple interface for connecting to an ODBC datasource (that is, an Access Database File)
  * In order to use this class, you must create an ODBC DSN for your database file, which, if you are
@@ -26,7 +26,7 @@ import("japhax.sql.Database");
  *    if you are trying to keep objects and memory usage to a minimum.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
  
 class Access extends Database implements SQL

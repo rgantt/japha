@@ -4,7 +4,7 @@ package("japha.io");
 import("japha.io.Writer");
 
 /**
- * $Id: OutputStreamWriter.php,v 1.3 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * An OutputStreamWriter is a bridge from character streams to byte streams: Characters written to it 
  * are encoded into bytes using a specified charset. The charset that it uses may be specified by 
@@ -31,7 +31,7 @@ import("japha.io.Writer");
  * malformed surrogate element is written is not specified. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 abstract class OutputStreamWriter extends Writer
 {

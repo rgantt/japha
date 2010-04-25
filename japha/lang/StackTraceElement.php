@@ -4,7 +4,7 @@ package("japha.lang");
 import("japha.lang.Object");
 
 /**
- * $Id: StackTraceElement.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * An element in a stack trace, as returned by Throwable.getStackTrace(). Each element represents a single stack frame. 
  * All stack frames except for the one at the top of the stack represent a method invocation. 
@@ -12,7 +12,7 @@ import("japha.lang.Object");
  * Typically, this is the point at which the throwable corresponding to the stack trace was created.
  * 
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class StackTraceElement extends Object implements _Serializable
 {

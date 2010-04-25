@@ -8,7 +8,7 @@ import("japha.util.Map");
 import("japha.io.Serializable");
 
 /** 
- * $Id: HashMap.php,v 1.7 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * Hash table based implementation of the Map interface. This implementation provides all of the optional map operations, 
  * and permits null values and the null key. (The HashMap class is roughly equivalent to Hashtable, except that it is 
@@ -60,7 +60,7 @@ import("japha.io.Serializable");
  * This class is a member of the Japha Collections Framework. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializable
 {

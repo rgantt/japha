@@ -4,7 +4,7 @@ package("japha.lang");
 import("japha.lang.Error");
 
 /**
- * $Id: ThreadDeath.php,v 1.1 2004/07/27 20:27:45 japha Exp $
+ * $Id$
  *
  * An instance of ThreadDeath is thrown in the victim thread when the stop method with zero arguments in class Thread is 
  * called.
@@ -18,7 +18,7 @@ import("japha.lang.Error");
  * because many applications catch all occurrences of Exception and then discard the exception.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.1 $
+ * @version $Revision$
  */
 class ThreadDeath extends Error
 {

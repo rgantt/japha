@@ -4,10 +4,10 @@ package("japhax.servlet");
 import('japhax.servlet.ServletConfig');
 
 /**
- * $Id: ServletConfigWrapper.php,v 1.1 2004/11/28 09:41:04 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.1 $
+ * @version $Revision$
  */
 class ServletConfigWrapper implements ServletConfig
 {

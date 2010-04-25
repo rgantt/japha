@@ -2,7 +2,7 @@
 package("japha.io");
 
 /**
- * $Id: Reader.php,v 1.6 2004/08/25 21:49:13 japha Exp $
+ * $Id$
  *
  * Abstract class for reading character streams. The only methods that a subclass must implement 
  * are <code>read(char[], int, int)</code> and <code>close()</code>. Most subclasses, however, 
@@ -10,7 +10,7 @@ package("japha.io");
  * additional functionality, or both. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/08/25 21:49:13 $
+ * @version $Revision$ $Date$
  */
 abstract class Reader extends Object
 {

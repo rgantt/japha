@@ -2,7 +2,7 @@
 package("core");
 
 /**
- * $Id: japha.php,v 1.30 2004/08/25 21:52:05 japha Exp $
+ * $Id$
  *
  * The low level japha functionality for including packages and classes.
  *
@@ -56,7 +56,7 @@ package("core");
  *        work.
  *
  * @author Ryan Gantt
- * @version $Revision: 1.30 $
+ * @version $Revision$
  */
 class Japha
 {
@@ -319,11 +319,11 @@ class Japha
 }
 
 /**
- * $Id: japha.php,v 1.30 2004/08/25 21:52:05 japha Exp $
+ * $Id$
  *
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.30 $
+ * @version $Revision$
  */
 class JaphaNamespace
 {
@@ -440,14 +440,14 @@ class JaphaNamespace
 }
 
 /**
- * $Id: japha.php,v 1.30 2004/08/25 21:52:05 japha Exp $
+ * $Id$
  *
  * This class allows us to define multiple source directories that Japha can include from.
  * 
  * It loads the classPath directive from config.php (which is the only required directive in that file.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.30 $
+ * @version $Revision$
  */
 class JaphaClasspath
 {
@@ -482,10 +482,10 @@ class JaphaClasspath
 }
 
 /**
- * $Id: japha.php,v 1.30 2004/08/25 21:52:05 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.30 $
+ * @version $Revision$
  */
 class JaphaError extends Exception 
 {
@@ -513,12 +513,12 @@ class JaphaError extends Exception
 }
 
 /**
- * $Id: japha.php,v 1.30 2004/08/25 21:52:05 japha Exp $
+ * $Id$
  *
  * Implement these.
  *
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.30 $
+ * @version $Revision$
  */
 class SystemPropertyManager
 {

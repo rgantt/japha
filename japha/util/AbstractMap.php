@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.util.Map");
 
 /** 
- * $Id: AbstractMap.php,v 1.5 2004/07/22 20:50:06 japha Exp $
+ * $Id$
  *
  * This class provides a skeletal implementation of the Map interface, to minimize the effort required to 
  * implement this interface.
@@ -27,7 +27,7 @@ import("japha.util.Map");
  * This class is a member of the Japha Collections Framework.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 abstract class AbstractMap extends Object implements Map
 {

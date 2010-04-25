@@ -9,7 +9,7 @@ import("japha.util.Set");
 import("com.japha.iterator.SetIterator");
 
 /** 
- * $Id: HashSet.php,v 1.5 2004/07/23 17:51:15 japha Exp $
+ * $Id$
  *
  * This class implements the Set interface, backed by a hash table (actually a HashMap instance). It makes no guarantees 
  * as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over 
@@ -42,7 +42,7 @@ import("com.japha.iterator.SetIterator");
  * This class is a member of the Japha Collections Framework.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 abstract class HashSet extends AbstractSet implements Cloneable, Serializable, Set
 {

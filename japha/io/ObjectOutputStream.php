@@ -6,10 +6,10 @@ import("japha.io.ObjectInput");
 import("japha.io.ObjectStreamConstants");
 
 /**
- * $Id: ObjectOutputStream.php,v 1.3 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 abstract class ObjectOutputStream extends InputStream implements ObjectInput, ObjectStreamConstants
 {

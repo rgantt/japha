@@ -4,7 +4,7 @@ package("japha.util");
 import("japha.util.Vector");
 
 /**
- * $Id: Stack.php,v 1.6 2004/07/19 22:25:47 japha Exp $
+ * $Id$
  *
  * The Stack class represents a last-in-first-out (LIFO) stack of objects. 
  * It extends class Vector with five operations that allow a vector to be treated as a stack. 
@@ -14,7 +14,7 @@ import("japha.util.Vector");
  * <p/>When a stack is first created, it contains no items. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/07/19 22:25:47 $
+ * @version $Revision$ $Date$
  */
 class Stack extends Vector
 {

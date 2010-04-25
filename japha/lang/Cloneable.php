@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Cloneable.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * A class implements the Cloneable interface to indicate to the Object.clone() method that 
  * it is legal for that method to make a field-for-field copy of instances of that class. 
@@ -20,7 +20,7 @@ package("japha.lang");
  * is no guarantee that it will succeed
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 interface Cloneable
 {

@@ -2,10 +2,10 @@
 package("japha.util");
 
 /**
- * $Id: Properties.php,v 1.1 2004/07/27 20:27:45 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.1 $
+ * @version $Revision$
  */
 class Properties extends Object
 {

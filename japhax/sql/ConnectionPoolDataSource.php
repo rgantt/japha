@@ -2,13 +2,13 @@
 package("japhax.sql");
 
 /**
- * $Id: ConnectionPoolDataSource.php,v 1.7 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * A factory for PooledConnection objects. An object that implements this interface will typically 
  * be registered with a naming service that is based on the JavaTM Naming and Directory Interface (JNDI). 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 interface ConnectionPoolDataSource
 {

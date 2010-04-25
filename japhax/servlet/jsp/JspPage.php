@@ -4,7 +4,7 @@ package("japhax.servlet.jsp");
 import("japhax.servlet.Servlet");
 
 /**
- * $Id: JspPage.php,v 1.2 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * The JspPage interface describes the generic interaction that a JSP Page Implementation 
  * class must satisfy; pages that use the HTTP protocol are described by the HttpJspPage 
@@ -39,7 +39,7 @@ import("japhax.servlet.Servlet");
  *       throws ServletException, IOException;
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface JspPage extends Servlet
 {

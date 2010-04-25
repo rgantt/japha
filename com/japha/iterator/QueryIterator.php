@@ -4,14 +4,14 @@ package("com.japha.iterator");
 import("japha.lang.Iterator");
 
 /**
- * $Id: QueryIterator.php,v 1.2 2004/07/14 22:27:02 japha Exp $
+ * $Id$
  *
  * <code>class QueryIterator</code>
  * This class will iterate over an sql result object, field by field.
  * The usage for this class would probably be seen best in the following:
  * 
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $ $Date: 2004/07/14 22:27:02 $
+ * @version $Revision$ $Date$
  */
 class QueryIterator extends Iterator
 {

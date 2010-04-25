@@ -2,14 +2,14 @@
 package("japhax.servlet.http");
 
 /**
- * $Id: HttpServletRequest.php,v 1.5 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * Interface that will define all of the actions that can be taken during Http Requests.
  *
  * Known subclasses: HttpRequestWrapper
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface HttpServletRequest
 {

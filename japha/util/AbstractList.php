@@ -6,7 +6,7 @@ import("japha.util.PList");
 import("com.japha.iterator.ListIterator");
 
 /**
- * $Id: AbstractList.php,v 1.15 2004/11/28 08:45:26 japha Exp $
+ * $Id$
  *
  * This class provides a skeletal implementation of the List interface to minimize the effort
  * required to implement this interface backed by a "random access" data store (such as an array).
@@ -34,7 +34,7 @@ import("com.japha.iterator.ListIterator");
  * more efficient implementation.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.15 $ $Date: 2004/11/28 08:45:26 $
+ * @version $Revision$ $Date$
  */
 abstract class AbstractList extends Object implements Collection, PList
 {

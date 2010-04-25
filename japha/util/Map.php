@@ -2,7 +2,7 @@
 package("japha.util");
 
 /** 
- * $Id: Map.php,v 1.4 2004/07/22 20:50:06 japha Exp $
+ * $Id$
  *
  * An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
  *
@@ -43,7 +43,7 @@ package("japha.util");
  * This interface is a member of the Japha Collections Framework.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 interface Map
 { 

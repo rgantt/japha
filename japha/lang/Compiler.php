@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Compiler.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * The Compiler class is provided to support Java-to-native-code compilers and related services. 
  * By design, the Compiler class does nothing; it serves as a placeholder for a JIT compiler implementation.
@@ -16,7 +16,7 @@ package("japha.lang");
  * If no compiler is available, these methods do nothing. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 final class Compiler
 {

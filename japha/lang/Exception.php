@@ -2,13 +2,13 @@
 package("japha.lang");
 
 /**
- * $Id: Exception.php,v 1.7 2004/07/23 17:51:14 japha Exp $
+ * $Id$
  *
  * The class Exception and its subclasses are a form of Throwable that indicates conditions that 
  * a reasonable application might want to catch. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 class _Exception extends Throwable
 {

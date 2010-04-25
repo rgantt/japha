@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Error.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * An Error is a subclass of Throwable that indicates serious problems that a reasonable 
  * application should not try to catch. Most such errors are abnormal conditions. The 
@@ -14,7 +14,7 @@ package("japha.lang");
  * are abnormal conditions that should never occur. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 class Error extends Throwable
 {

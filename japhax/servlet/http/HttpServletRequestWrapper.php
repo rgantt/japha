@@ -5,14 +5,14 @@ import('japhax.servlet.http.HttpServletRequest');
 import('japhax.servlet.http.HttpSession');
 
 /**
- * $Id: HttpServletRequestWrapper.php,v 1.6 2004/11/28 09:41:04 japha Exp $
+ * $Id$
  *
  * This class is the interface to all the requests of the http protocol.
  * Most of the work is actually done by PHP to setup the variables, so this
  * class is just an interface to that PHP layer.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.6 $ $Date: 2004/11/28 09:41:04 $
+ * @version $Revision$ $Date$
  * @based on a class by Dan Allen
  */
 class HttpServletRequestWrapper extends Object implements HttpServletRequest

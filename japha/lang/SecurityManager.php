@@ -2,10 +2,10 @@
 package("japha.lang");
 
 /**
- * $Id: SecurityManager.php,v 1.2 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.2 $
+ * @version $Revision$
  */
 class SecurityManager extends Object
 {

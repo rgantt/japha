@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: ClassLoader.php,v 1.7 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * Class ClassLoader
  *
@@ -11,7 +11,7 @@ package("japha.lang");
  * can be caught in the linking process ARE caught, and not let alone until run time.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 class ClassLoader extends Object
 {

@@ -5,10 +5,10 @@ import("japha.io.Writer");
 import("japha.lang.StringBuffer");
 
 /**
- * $Id: StringWriter.php,v 1.4 2004/07/27 20:26:55 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 class StringWriter extends Writer
 {

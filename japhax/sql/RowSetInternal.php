@@ -2,14 +2,14 @@
 package("japhax.sql");
 
 /**
- * $Id: RowSetInternal.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * The interface that a RowSet object implements in order to present itself to a RowSetReader 
  * or RowSetWriter object. The RowSetInternal interface contains methods that let the reader or 
  * writer access and modify the internal state of the rowset. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface RowSetInternal
 {

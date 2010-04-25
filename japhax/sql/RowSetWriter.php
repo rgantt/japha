@@ -2,7 +2,7 @@
 package("japhax.sql");
 
 /**
- * $Id: RowSetWriter.php,v 1.4 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * An object that implements the RowSetWriter interface, called a writer. A writer may be 
  * registered with a RowSet object that supports the reader/writer paradigm. 
@@ -18,7 +18,7 @@ package("japhax.sql");
  * entirely on its implementation.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 interface RowSetWriter
 {

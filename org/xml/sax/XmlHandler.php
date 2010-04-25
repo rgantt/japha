@@ -2,7 +2,7 @@
 package("org.xml.sax");
 
 /**
- * $Id: XmlHandler.php,v 1.3 2004/07/14 22:27:05 japha Exp $
+ * $Id$
  *
  * A universal xml handler for parsed XML data. All of these methods are actually imported at the end of
  * the file, making them globally avaiable throughout the file.
@@ -13,7 +13,7 @@ package("org.xml.sax");
  * or open files, or authenticate... whatever you want.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:05 $
+ * @version $Revision$ $Date$
  */
 class XmlHandler extends Object
 {

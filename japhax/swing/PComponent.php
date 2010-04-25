@@ -2,7 +2,7 @@
 package("japhax.swing");
 
 /**
- * $Id: PComponent.php,v 1.7 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * The base class for all Swing components except top-level containers.
  * To use a component that inherits from <code>JComponent</code>,
@@ -77,7 +77,7 @@ package("japhax.swing");
  *  has been added to the <code>java.beans</code> package.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.7 $
+ * @version $Revision$
  */
 abstract class PComponent extends Object
 {

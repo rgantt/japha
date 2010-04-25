@@ -2,7 +2,7 @@
 package("japha.lang");
 
 /**
- * $Id: Runnable.php,v 1.3 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * The Runnable interface should be implemented by any class whose instances are intended to be executed 
  * by a thread. The class must define a method of no arguments called run. 
@@ -19,7 +19,7 @@ package("japha.lang");
  * modifying or enhancing the fundamental behavior of the class. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $
+ * @version $Revision$
  */
 interface Runnable
 {

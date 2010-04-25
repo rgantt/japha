@@ -2,7 +2,7 @@
 package("japhax.sql");
 
 /**
- * $Id: RowSetReader.php,v 1.4 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * The facility that a disconnected RowSet object calls on to populate itself with rows of data. 
  * A reader (an object implementing the RowSetReader interface) may be registered with a RowSet 
@@ -10,7 +10,7 @@ package("japhax.sql");
  * called, it in turn calls the reader's readData method. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 interface RowSetReader
 {

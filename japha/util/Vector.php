@@ -9,7 +9,7 @@ import("japha.lang.Cloneable");
 import("japha.io.Serializable");
 
 /**
- * $Id: Vector.php,v 1.9 2004/07/30 23:33:41 japha Exp $
+ * $Id$
  *
  * The Vector class implements a growable array of objects. Like an array, it contains 
  * components that can be accessed using an integer index. However, the size of a Vector can 
@@ -43,7 +43,7 @@ import("japha.io.Serializable");
  * detect bugs. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.9 $ $Date: 2004/07/30 23:33:41 $
+ * @version $Revision$ $Date$
  */
 class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Serializable
 {	

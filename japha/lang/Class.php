@@ -4,7 +4,7 @@ import("japha.lang.Object");
 import('japha.lang.reflect.Constructor');
 
 /**
- * $Id: Class.php,v 1.10 2004/12/17 00:30:32 japha Exp $
+ * $Id$
  *
  * Instances of the class Class represent classes and interfaces in a running Java 
  * application. Every array also belongs to a class that is reflected as a Class object 
@@ -29,7 +29,7 @@ import('japha.lang.reflect.Constructor');
  *    System.out.println("The name of class Foo is: " + Foo.class.getName() );
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.10 $
+ * @version $Revision$
  */
 class _Class extends Object
 {

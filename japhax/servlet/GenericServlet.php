@@ -5,7 +5,7 @@ import("japhax.servlet.Servlet");
 import("japhax.servlet.ServletConfig");
 
 /**
- * $Id: GenericServlet.php,v 1.3 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * Defines a generic, protocol-independent servlet. To write an HTTP servlet for use on the Web, 
  * extend HttpServlet instead. 
@@ -21,7 +21,7 @@ import("japhax.servlet.ServletConfig");
  * To write a generic servlet, you need only override the abstract service method. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 abstract class GenericServlet extends Object implements Servlet, ServletConfig, Serializable 
 {

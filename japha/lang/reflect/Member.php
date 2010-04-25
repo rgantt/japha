@@ -2,10 +2,10 @@
 package("japha.lang.reflect");
 
 /**
- * $Id: Member.php,v 1.4 2004/07/19 17:28:43 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $
+ * @version $Revision$
  */
 interface Member
 {

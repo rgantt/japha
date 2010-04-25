@@ -2,14 +2,14 @@
 package("japha.lang");
 
 /**
- * $Id: Object.php,v 1.18 2004/07/30 23:33:40 japha Exp $
- * $Author: japha $
+ * $Id$
+ * $Author$
  *
  * A php representation of the java.lang.Object class that all Java classes inherit from.
  * Includes some of the basic functionality that the builtin stdClass does not.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.18 $
+ * @version $Revision$
  */
 class Object extends Exception
 {    

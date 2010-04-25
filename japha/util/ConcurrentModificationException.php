@@ -2,7 +2,7 @@
 package("japha.util");
 
 /**
- * $Id: ConcurrentModificationException.php,v 1.1 2004/07/23 17:51:47 japha Exp $
+ * $Id$
  *
  * This exception may be thrown by methods that have detected concurrent modification of an object when such modification 
  * is not permissible.
@@ -24,7 +24,7 @@ package("japha.util");
  *correctness: ConcurrentModificationException should be used only to detect bugs.
  *
  * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.1 $
+ * @version $Revision$
  */
 class ConcurrentModificationException extends _RuntimeException
 {

@@ -2,7 +2,7 @@
 package("japha.io");
 
 /**
- * $Id: Serializable.php,v 1.3 2004/07/14 22:27:03 japha Exp $
+ * $Id$
  *
  * Serializability of a class is enabled by the class implementing the java.io.Serializable 
  * interface. Classes that do not implement this interface will not have any of their 
@@ -70,7 +70,7 @@ package("japha.io");
  * This readResolve method follows the same invocation rules and accessibility rules as writeReplace. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.3 $ $Date: 2004/07/14 22:27:03 $
+ * @version $Revision$ $Date$
  */
 interface _Serializable
 {

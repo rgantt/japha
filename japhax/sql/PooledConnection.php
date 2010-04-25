@@ -2,7 +2,7 @@
 package("japhax.sql");
 
 /**
- * $Id: PooledConnection.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * An object that provides hooks for connection pool management. A PooledConnection object 
  * represents a physical connection to a data source. The connection can be recycled 
@@ -13,7 +13,7 @@ package("japhax.sql");
  * is used by a middle tier infrastructure that manages the pooling of connections.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 interface PooledConnection
 {

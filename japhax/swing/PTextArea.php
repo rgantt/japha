@@ -4,10 +4,10 @@ package("japha.swing");
 import("japhax.swing.PTextComponent");
 
 /**
- * $Id: PTextArea.php,v 1.4 2004/07/14 22:27:05 japha Exp $
+ * $Id$
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:05 $
+ * @version $Revision$ $Date$
  */
 class PTextArea extends PTextComponent
 {

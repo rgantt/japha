@@ -4,7 +4,7 @@ package("com.japha.iterator");
 import("japha.util.Iterator");
 
 /**
- * $Id: ListIterator.php,v 1.4 2004/11/28 08:39:46 japha Exp $
+ * $Id$
  *
  * <code>class ArrayIterator</code>
  * This class will iterate over an array, index by index.
@@ -27,7 +27,7 @@ import("japha.util.Iterator");
  *
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/11/28 08:39:46 $
+ * @version $Revision$ $Date$
  */
 class ListIterator extends _Iterator
 {

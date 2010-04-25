@@ -4,7 +4,7 @@ package("japhax.sql");
 import("japhax.sql.ResultSet");
 
 /**
- * $Id: RowSet.php,v 1.5 2004/07/20 21:12:42 japha Exp $
+ * $Id$
  *
  * The interface that adds support to the JDBC API for the JavaBeansTM component model. A rowset, 
  * which can be used as a JavaBeans component in a visual Bean development environment, can be 
@@ -44,7 +44,7 @@ import("japhax.sql.ResultSet");
  * be made to work with rowsets. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $ $Date: 2004/07/20 21:12:42 $
+ * @version $Revision$ $Date$
  */
 interface RowSet extends ResultSet
 {

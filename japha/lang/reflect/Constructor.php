@@ -4,7 +4,7 @@ package("japha.lang.reflect");
 import("japha.lang.reflect.AccessibleObject");
 
 /**
- * $Id: Constructor.php,v 1.5 2004/12/17 00:30:48 japha Exp $
+ * $Id$
  *
  * Constructor provides information about, and access to, a single constructor for a class. 
  *
@@ -13,7 +13,7 @@ import("japha.lang.reflect.AccessibleObject");
  * IllegalArgumentException if a narrowing conversion would occur. 
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.5 $
+ * @version $Revision$
  */
 class Constructor extends AccessibleObject
 {

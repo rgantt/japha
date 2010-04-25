@@ -2,12 +2,12 @@
 package("japhax.servlet.http");
 
 /**
- * $Id: Cookie.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * Cookies. Manage, edit, delete, set cookies.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 class Cookie
 {

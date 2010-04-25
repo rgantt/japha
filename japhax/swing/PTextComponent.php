@@ -3,7 +3,7 @@ package("japhax.swing");
 
 import("japhax.swing.PComponent");
 /**
- * $Id: PTextComponent.php,v 1.4 2004/07/14 22:27:05 japha Exp $
+ * $Id$
  *
  * JTextComponent</code> is the base class for swing text 
  * components.  It tries to be compatible with the
@@ -73,7 +73,7 @@ import("japhax.swing.PComponent");
  * by consuming it.
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:05 $
+ * @version $Revision$ $Date$
  */
 abstract class PTextComponent extends PComponent
 {

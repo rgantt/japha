@@ -4,7 +4,7 @@ package("japhax.sql");
 import("japha.util.EventObject");
 
 /**
- * $Id: ConnectionEvent.php,v 1.4 2004/07/14 22:27:04 japha Exp $
+ * $Id$
  *
  * An Event object that provides information about the source of a connection-related event. 
  * ConnectionEvent objects are generated when an application closes a pooled connection 
@@ -14,7 +14,7 @@ import("japha.util.EventObject");
  * <li/>In the case of an error event, the SQLException about to be thrown to the application </ul>
  *
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision: 1.4 $ $Date: 2004/07/14 22:27:04 $
+ * @version $Revision$ $Date$
  */
 class ConnectionEvent extends EventObject
 {
