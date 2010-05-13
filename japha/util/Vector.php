@@ -196,9 +196,7 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
     /**
      * Delete the value of a single list index
      *
-     * As of now, this method successfully deletes the object at the specified index, but the
-     * indices of the objects remain the same, and subsequent indices are not decremented. How
-     * this will affect anything is yet to be determined.
+     * r9: indices updated after value is removed, otherwise equals( Object ) doesn't work
      *
      * @access public
      * @param index the index to remove
@@ -206,8 +204,7 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
      */
     public function removeElementAt( $index )
     {
-        unset( $this->list[ $index ] );
-        $this->modCount++;
+    	return $this->remove( $index );
     }
 
     /**
@@ -458,14 +455,9 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
 		while( $ct->hasNext() )
 		{
 			if( !$this->contains( $ct->current() ) )
-			{
-				echo 'not in there :(';
 				return false;
-			}
-			echo 'its in there!';
 			$ct->next();
 		}
-		echo 'shits true';
 		return true;
 	}
 }

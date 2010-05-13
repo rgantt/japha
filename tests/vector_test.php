@@ -74,22 +74,41 @@ class VectorTest extends TestCase
 		Assert::assertEquals( $this->v1, $v );
 	}
 	
+	public function testSize()
+	{
+		$v = new Vector();
+		$v->addAll( $this->cases );
+		
+		Assert::assertEquals( count( $this->cases ), $v->size() );
+	}
+	
 	public function testContains()
 	{
+		Assert::assertTrue( $this->v1->containsAll( $this->v2 ) );
+		Assert::assertTrue( $this->v2->containsAll( $this->v1 ) );
+
 		$v = new Vector();
 		$v->addAll( $this->cases );
 		$n = new Vector();
 		$n->addAll( $this->cases );
 		
 		$v->removeElementAt( rand( 0, $v->size() ) );
-		Assert::assertEquals( $v, $n );
-		
-		Assert::assertTrue( $this->v1->containsAll( $this->v2 ) );
-		Assert::assertTrue( $this->v2->containsAll( $this->v1 ) );
 		
 		// confirm the subset/superset relationship
 		Assert::assertTrue( $this->v1->containsAll( $v ) );
-		Assert::assertTrue( !$v->containsAll( $this->v1 ) );
+		Assert::assertFalse( !$v->containsAll( $this->v1 ) );
+	}
+	
+	public function testRemove()
+	{
+		$v = new Vector();
+		$v->addAll( $this->cases );
+		$n = new Vector();
+		$n->addAll( $this->cases );
+		
+		Assert::assertEquals( $v, $n );
+		$v->removeElementAt( rand( 0, $v->size() ) );
+		Assert::assertEquals( $v, $n );		
 	}
 	
 	public static function suite() 

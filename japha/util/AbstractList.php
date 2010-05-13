@@ -77,7 +77,7 @@ abstract class AbstractList extends Object implements Collection, PList
      * @access protected
      * @var
      */
-    protected $list = "";
+    public $list = array();
 
     public function add()
     {
@@ -225,24 +225,16 @@ abstract class AbstractList extends Object implements Collection, PList
      */
     public function equals( Object $object )
     {
-        if( $object instanceof AbstractList )
+        if( !( $object instanceof AbstractList ) )
+        	return false;
+        if( $object->size() != $this->size() )
+        	return false;
+        for( $i = 0; $i < $this->size(); $i++ )
         {
-            if( count($object->list) == count($this->list) )
-            {
-                for( $i = 0; $i < count($this->list); $i++ )
-                {
-                    if( $object->list[$i] == $this->list[$i] )
-                        continue;
-                    else
-                        return false;
-                }
-				return true;
-            }
-            else
+            if( $object->list[$i] != $this->list[$i] )
                 return false;
         }
-        else
-            return false;
+        return true;
     }
 
     /**
