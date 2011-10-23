@@ -1,11 +1,9 @@
 <?
-package("com.japha.iterator");
+namespace com\japha\iterator;
 
-import("japha.util.Iterator");
+use japha\util\Iterator;
 
 /**
- * $Id$
- *
  * <code>class ArrayIterator</code>
  * This class will iterate over an array, index by index.
  * The usage for this class would probably be seen best in the following:
@@ -24,10 +22,6 @@ import("japha.util.Iterator");
  *    echo $iter->current();
  *    $iter->next();
  * }
- *
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 class EnumerationIterator extends _Iterator
 {
@@ -138,4 +132,3 @@ class EnumerationIterator extends _Iterator
      	return print_r($this->list);
 	}
 }
-?>

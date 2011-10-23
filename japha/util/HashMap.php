@@ -42,65 +42,37 @@ use japha\io\_Serializable;
  * any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw 
  * ConcurrentModificationException on a best-effort basis. Therefore, it would be wrong to write a program that depended 
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
- *
- * This class is a member of the Japha Collections Framework. 
  */
-class HashMap extends AbstractMap implements Cloneable, Map, _Serializable
-{
-    public function __construct()
-    {
+class HashMap extends AbstractMap implements Cloneable, Map, _Serializable {
+	private $loadFactor = 0.75;
+	private $capacity = 16;
+	
+	/**
+	 * More like... sillymorphism
+	 */
+    public function __construct() {
         $argv = func_get_args();
-        switch( func_num_args() )
-        {
-            case 0:
-                $this->HashMap0();
-                break;
+        switch( func_num_args() ) {
             case 1:   
-                if( $argv[0] instanceof Map )
-                {  
-                    $this->HashMap1( $argv[0] );
+                if( $argv[0] instanceof Map ) {  
+                    $this->HashMap0( $argv[0] );
                     break;
                 }
-                $this->HashMap3( $argv[0] );
+				$this->capacity = $argv[0];
                 break;
             case 2:
-                $this->HashMap2( $argv[0], $argv[1] );
+				$this->capacity = $argv[0];
+				$this->loadFactor = $argv[1];
                 break;
         }   
-    }
-    
-    /**
-     * Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
-     */
-    private function HashMap0()
-    {
-        parent::__construct();
-    }
-       
-    /**
-     * Constructs an empty HashMap with the specified initial capacity and the default load factor (0.75).
-     */
-    private function HashMap1( $initialCapacity )
-    {
-        parent::__construct();
-    }
-       
-    /**
-     * Constructs an empty HashMap with the specified initial capacity and load factor.
-     */
-    private function HashMap2( $initialCapacity, $loadFactor )
-    {
-        parent::__construct();
     }
        
     /**
      * Constructs a new HashMap with the same mappings as the specified Map.
      */
-    private function HashMap3( Map $m )
-    {
+    private function HashMap0( Map $m ) {
         parent::__construct();
-        for( $i = $m->iterator(); $i->hasNext(); $i->next() )
-        {
+        for( $i = $m->iterator(); $i->hasNext(); $i->next() ) {
             $this->put( $i->current, $m->get( $i->current() ) );   
         }
     }
@@ -110,195 +82,90 @@ class HashMap extends AbstractMap implements Cloneable, Map, _Serializable
      *
      * This implementation isn't quite right
      */
-    public function entrySet()
-    {
+    public function entrySet() {
         return $this;
-    }
-      
-    /**
-     * Removes all mappings from this map.
-     */
-    public function clear()
-    {
-        return parent::clear();
-    }
-      
-    /**
-     * Returns a shallow copy of this HashMap instance: the keys and values themselves are not cloned.
-     */
-    //public function _clone(){}
-          
-    /**
-     * Returns true if this map contains a mapping for the specified key.
-     */
-    public function containsKey( $key )
-    {
-        return parent::containsKey( $key );
-    }
-       
-    /**
-     * Returns true if this map maps one or more keys to the specified value.
-     */
-    public function containsValue( $value )
-    {
-        return parent::containsValue( $value );
-    }
-          
-    /**
-     * Returns the value to which the specified key is mapped in this identity hash map, or null if the map contains no mapping for this key.
-     */
-    public function get( $key )
-    {
-        return parent::get( $key );
-    }
-       
-    /**
-     * Returns true if this map contains no key-value mappings.
-     */
-    public function isEmpty()
-    {
-        return parent::isEmpty();
     }
            
     /**
      * Returns a set view of the keys contained in this map.
      */
-    public function keySet()
-    {
+    public function keySet() {
         $ks = $this->keySet;
-        if( $ks == null )
-        {
+        if( $ks == null ) {
             $this->keySet = new KeySet( $this );   
         }
         $ks = $this->keySet;
         return $ks;
     }
-         
-    /**
-     * Associates the specified value with the specified key in this map.
-     *
-     * Should be Object, Object, but sometimes we don't want only Object keys
-     */
-    public function put( $key, $value )
-    {
-        parent::put( $key, $value );
-    }
-         
-    /**
-     * Copies all of the mappings from the specified map to this map These mappings will replace any mappings that this map had for any of the keys currently in the specified map.
-     */
-    public function putAll( Map $m )
-    {
-        return parent::putAll( $m );
-    }
-          
-    /**
-     * Removes the mapping for this key from this map if present.
-     */
-    public function remove( $key ){}
-         
-    /**
-     * Returns the number of key-value mappings in this map. 
-     */
-    public function size()
-    {
-        return parent::size();
-    }
-       
-    /**
-     * Returns a collection view of the values contained in this map.
-     */
-    public function values()
-    {
-        return parent::values();
-    }
 }
 
-class KeySet extends AbstractSet 
-{
+class KeySet extends AbstractSet {
     private $map;
     
-    public function __construct( $map )
-    {
+    public function __construct( $map ) {
         $this->map = $map;    
     }
     
-    public function iterator() 
-    {
+    public function iterator() {
         return new KeyIterator( $this->map );
     }
     
-    public function size() 
-    {
+    public function size() {
         return $this->map->size();
     }
 
-    public function contains( Object $o ) 
-    {
+    public function contains( Object $o ) {
         return $this->map->containsKey( $o );
     }
     
-    public function remove( $o ) 
-    {
+    public function remove( $o ) {
             return $this->map->removeEntryForKey( $o ) != null;
     }
     
-    public function clear() 
-    {
+    public function clear() {
             $this->map->clear();
     }
 }    
 
-abstract class HashIterator //extends _Iterator 
-{
-    protected $index;             // current slot
+abstract class HashIterator /*extends _Iterator*/ {
+    protected $index;
     protected $list;
     protected $map;
 
-    public function __construct() 
-    {
+    public function __construct() {
         $this->list = $this->map->map;
         $this->END = count( $this->list );
         echo $this->END;
         $this->index = 0;
     }
 
-    public function hasNext() 
-    {
+    public function hasNext() {
         return $this->list[ $this->index ];
     }
 
-    public function next() 
-    {
+    public function next() {
         return $this->index++;
     }
 
-    public function current()
-    {
+    public function current() {
         return $this->list[ $this->index ];
     }
 }
     
-class ValueIterator extends HashIterator 
-{
-    public function next() 
-    {
-        return nextEntry().value;
+class ValueIterator extends HashIterator {
+    public function next() {
+        return $this->nextEntry()->value;
     }
 }
 
-class EntryIterator extends HashIterator 
-{
-    public function next() 
-    {
-        return nextEntry();
+class EntryIterator extends HashIterator {
+    public function next() {
+        return $this->nextEntry();
     }
 }
     
-class KeyIterator extends HashIterator 
-{
-    public function __construct( Map $map )
-    {
+class KeyIterator extends HashIterator {
+    public function __construct( Map $map ) {
         $this->map = $map;
         parent::__construct();       
     }

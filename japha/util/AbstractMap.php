@@ -1,4 +1,4 @@
-<?
+<? 
 namespace japha\util;
 
 use japha\lang\Object;
@@ -24,50 +24,46 @@ use japha\lang\Object;
  *
  * This class is a member of the Japha Collections Framework.
  */
-abstract class AbstractMap extends Object implements Map
-{
-    public $map = array();
-    
-    public function __construct()
-    {
-        $this->clear();
-    } 
+abstract class AbstractMap extends Object implements Map {
+    protected $map;
+	
+	public function __construct() {
+		$this->clear();
+	}
     
     /**
      * Removes all mappings from this map (optional operation).
      */
-    public function clear()
-    {
+    public function clear() {
         $this->map = array();
     }
     
     /**
      * Returns true if this map contains a mapping for the specified key.
      */
-    public function containsKey( $key )
-    {
-        return array_key_exists( $key, $this->map );
+    public function containsKey( $key ) {
+		return isset( $this->map[ $this->hashKey( $key ) ] );
     }
     
     /**
      * Returns true if this map maps one or more keys to this value.
      */
-    public function containsValue( $value )
-    {
-        return in_array( $value, $this->map );
+    public function containsValue( $value ) {
+		foreach( $this->map as $key => $mappedValue ) {
+			if( $value === $mappedValue ) {
+				return true;
+			}
+		}
+		return false;
     }
     
     /**
      * Compares the specified object with this map for equality.
      */
-    public function equals( Object $o )
-    {
-        if( $o instanceof AbstractCollection )
-        {
-            foreach( $this->map as $key => $value )
-            {
-                if( !$o->containsKey( $key ) || !$o->containsValue( $value ) )
-                {
+    public function equals( Object $o ) {
+        if( $o instanceof AbstractCollection ) {
+            foreach( $this->map as $key => $value ) {
+                if( !$o->containsKey( $key ) || !$o->containsValue( $value ) ) {
                     return false;
                 }
             }
@@ -79,10 +75,8 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns the value to which this map maps the specified key.
      */
-    public function get( $key )
-    {
-        if( $this->containsKey( $key ) )
-        {
+    public function get( $key ) {
+        if( $this->containsKey( $key ) ) {
             return $this->map[ $key ];
         }
         return null;
@@ -91,11 +85,9 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns the hash code value for this map.
      */
-    public function hashCode()
-    {
+    public function hashCode() {
         $h = 0;
-        foreach( $this->map as $key => $value )
-        {
+        foreach( $this->map as $key => $value ) {
             $h = 2 * org( var_dump( $key ) ) + ord( var_dump( $value ) );   
         }
         return $h;
@@ -104,9 +96,8 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns true if this map contains no key-value mappings.
      */
-    public function isEmpty()
-    {
-        return ( count( $this->map ) == 0 ? true : false );
+    public function isEmpty() {
+        return count( $this->map ) == 0 ? true : false;
     }
        
     /**
@@ -114,17 +105,28 @@ abstract class AbstractMap extends Object implements Map
      */
     public function put( $key, $value )
     {
-        $this->map[ $key ] = $value;
+        $this->map[ $this->hashKey( $key ) ] = $value;
     }
+	
+	private function hashKey( $key ) {
+		if( $key instanceof Object ) {
+			$key = $key->hashCode();
+		} elseif( is_object( $key ) || is_array( $key ) ) {
+			$h = 0;
+			foreach( $key as $attr => $val ) {
+				$h += ord( $attr ) + ord( $val );
+			}
+			$key = $h;
+		}
+		return $key;
+	}
     
     /**
      * Copies all of the mappings from the specified map to this map (optional operation).
      */
-    public function putAll( Map $t )
-    {
+    public function putAll( Map $t ) {
         $keys = $t->keySet();
-        for( $i = $keys->iterator(); $i->hasNext(); $i->next() )
-        {
+        for( $i = $keys->iterator(); $i->hasNext(); $i->next() ) {
             $this->put( $i->current(), $t->get( $i->current() ) );   
         }
     }
@@ -132,10 +134,8 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Removes the mapping for this key from this map if present (optional operation).
      */
-    public function remove( $key )
-    {
-        if( $this->containsKey( $key ) )
-        {
+    public function remove( $key ) {
+        if( $this->containsKey( $key ) ) {
             unset( $this->map[ $key ] );
         }
     }
@@ -143,16 +143,14 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns the number of key-value mappings in this map.
      */
-    public function size()
-    {
+    public function size() {
         return count( $this->map );
     }
        
     /**
      *  Returns a string representation of this map.
      */
-    public function toString()
-    {
+    public function toString() {
         return "AbstractMap( ".$this->size()." ): ".$this->hashCode();
     }
        
@@ -171,17 +169,7 @@ abstract class AbstractMap extends Object implements Map
     }
     
     /**
-     * Returns a shallow copy of this AbstractMap instance: the keys and values themselves are not cloned.
-     */
-    //public function _clone(){}
-    
-    /**
      * Returns a set view of the mappings contained in this map.
      */
     abstract public function entrySet();
-	
-		
-	protected function hash( $key, $iteration ) {
-	}
 }
-?>

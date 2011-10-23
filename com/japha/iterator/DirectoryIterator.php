@@ -1,11 +1,9 @@
 <?
-package("com.japha.iterator");
+namespace com\japha\iterator;
 
-import("japha.lang.Iterator");
+use japha\lang\Iterator;
 
 /**
- * $Id$
- *
  * Class <code>DirectoryIterator</code> provides a simple iterator for traversing the
  * files in a directory.
  * <p>
@@ -40,11 +38,8 @@ import("japha.lang.Iterator");
  *   course, PHP will still log warnings and/or errors somewhere, depending on
  *   how this is configured.
  * </p>
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-class DirectoryIterator //extends Iterator
+class DirectoryIterator extends Iterator
 {
 	/**
 	 * The name of the directory
@@ -192,4 +187,3 @@ class DirectoryIterator //extends Iterator
 		return $this->file;
 	}
 }
-?>

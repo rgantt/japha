@@ -1,29 +1,23 @@
 <?
 namespace japha\lang;
 
+use stdClass;
+use japha\io\_Serializable;
+
 /**
- * $Id$
- * $Author$
- *
  * A php representation of the java.lang.Object class that all Java classes inherit from.
  * Includes some of the basic functionality that the builtin stdClass does not.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
-class Object
-{    
-    static $class;
+class Object extends stdClass {    
+    private static $class;
     
     /**
      * Create a copy of the current object.
      *
      * @return Object copy of the current instance
      */
-    public function _clone()
-    {
-        $copy = $this;
-        return $copy;
+    public function _clone() {
+        return clone $this;
     }
 
    /**
@@ -34,8 +28,7 @@ class Object
      * @return boolean true iff the current instance is the SAME as another instance of the same type
      * @param object object of any type to compare
      */
-    public function equals( Object $object )
-    {
+    public function equals( Object $object ) {
         return ( $this == $object );
     }
 
@@ -47,8 +40,7 @@ class Object
      * @return boolean true iff the current isntance is the SAME as another instance of the same type
      * @param object object of any type to compar
      */
-    public function equalsIgnoreCase( $object )
-    {
+    public function equalsIgnoreCase( $object ) {
         return ( strtolower( $this ) === strtolower( $object ) );
     }
 
@@ -57,8 +49,7 @@ class Object
      *
      * @return ReflectionClass An instance of the PHP internal class reflection class
      */
-    public final function getClass()
-    {
+    public final function getClass() {
 	    return new _Class( $this );
 	    //return new ReflectionClass( get_class( $this ) );
     }
@@ -68,68 +59,52 @@ class Object
      *
      * @return String the String representation of this classes methods and members
      */
-    public function toString()
-    {
+    public function toString() {
         return var_export( $this, TRUE );
-    }
-
-    /**
-     * When called, will stop (pause, actually) execution of the script for a given number of seconds or microseconds.
-     *
-     * @param seconds Number of seconds or microseconds to wait
-     * @param micro Pass 'true' to use microseconds (a millionth of a second) instead of seconds
-     */
-    public function wait( $seconds, $micro = FALSE)
-    {
-        switch( $micro )
-        {
-            case TRUE:
-                usleep( $seconds );
-                break;
-
-            case FALSE:
-            default:
-                sleep( $seconds );
-                break;
-        }
     }
 
 	/**
 	 * Overloads the language-level "__toString()" method that is called each time an object is used in a string context
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 	   return $this->toString();   
 	}
-	
-	/**
-	 * Used to wrap to the Virtual Machine function that would kill the VM with the given error code
-	 *
-	 * Now does nothing.
-	 */
-	public function _exit( $int ){}
 
 	/**
 	 * Prepares all of the member variables in the instance for serialization
 	 */
-	public function __sleep(){}
+	public function __sleep() {
+		if( !( $this instanceof _Serializable ) ) {
+			throw new Exception("Cannot serialize instances of this class");
+		}
+	}
 
 	/**
 	 * Reload the member variables after serialiatztion
 	 */
-	public function __wakeup(){}
+	public function __wakeup() {
+		if( !( $this instanceof _Serializable ) ) {
+			throw new Exception("Cannot unserialize instances of this class");
+		}
+	}
 	
     /**
-     * Forces deletion of all references to this object. They become NullPointers.
-     *
-     * This has been modified to call the wrapper to the Virtual Machine instead of a flat out delete
-     *
+     * Returns the hash code value for this map.
      */
-    public function finalize(){}
-    
-    static function initStaticClass( $name = '' )
-    {
-        self::$class = new $name;
+    public function hashCode() {
+		$h = 0;
+		foreach( $this as $key => $value ) {
+			$h += ord( $key ) + ord( $value );
+		}
+		return $h;
     }
+	
+	/**
+	 * A sneaky way to overload stdClass to accept runtime, callable lambda attributes
+	 */
+	public function __call($key,$params){
+		if( !isset( $this->{$key} ) ) throw new Exception("Call to undefined method ".get_class($this)."::".$key."()");
+		$subject = $this->{$key};
+		call_user_func_array( $subject, $params );
+	}
 }
-?>

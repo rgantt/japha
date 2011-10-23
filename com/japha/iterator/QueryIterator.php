@@ -1,20 +1,14 @@
 <?
-package("com.japha.iterator");
+namespace com\japha\iterator;
 
-import("japha.lang.Iterator");
+use japha\lang\Iterator;
 
 /**
- * $Id$
- *
  * <code>class QueryIterator</code>
  * This class will iterate over an sql result object, field by field.
  * The usage for this class would probably be seen best in the following:
- * 
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-class QueryIterator extends Iterator
-{
+class QueryIterator extends Iterator {
 	/**
 	 * Result set to iterate over
 	 *
@@ -46,8 +40,7 @@ class QueryIterator extends Iterator
 	 *
 	 * @access public
 	 */
-	function __construct( $query )
-	{
+	function __construct( $query ) {
 		$this->query = $query;
 		$this->END = $this->query->num_rows($this->query);
 		$this->reset(true);
@@ -59,8 +52,7 @@ class QueryIterator extends Iterator
 	 * @access public
 	 * @return int The next index of the Query
 	 */
-	public function next()
-	{
+	public function next() {
 		$this->index++;
 		return $this->index;
 	}
@@ -71,14 +63,10 @@ class QueryIterator extends Iterator
 	 * @access public
 	 * @return boolean true iff the Iterator can be incremented
 	 */
-	public function hasNext()
-	{
-	   if( $this->query->fetch_row($this->index+1, 'array') != NULL )
-	   {
+	public function hasNext() {
+	   if( $this->query->fetch_row($this->index+1, 'array') != NULL ) {
 	       return true;
-	   }
-	   else
-	   {
+	   } else {
 	       return false;
 	   }
 	}
@@ -89,8 +77,7 @@ class QueryIterator extends Iterator
 	 * @access public
 	 * @return MySQL Value of Array at the current index
 	 */
-	public function current()
-	{
+	public function current() {
 		return $this->query->fetch_row($this->index, 'array');
 	}
 	
@@ -100,8 +87,7 @@ class QueryIterator extends Iterator
 	 * @access public
 	 * @return int The previous index of the Query
 	 */
-	public function previous()
-	{
+	public function previous() {
 		$this->index--;
 		return $this->index;
 	}
@@ -112,16 +98,11 @@ class QueryIterator extends Iterator
 	 * @access public
 	 * @return boolean true iff the Iterator can be de-incremented
 	 */
-	public function hasPrevious()
-	{
-	   if( $this->query->fetch_row($this->index-1, 'array') != NULL )
-	   {
+	public function hasPrevious() {
+	   if( $this->query->fetch_row($this->index-1, 'array') != NULL ) {
 	       return true;
-	   }
-	   else
-	   {
+	   } else {
 	       return false;
 	   }
 	}
 }
-?>
