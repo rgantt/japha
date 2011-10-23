@@ -1,9 +1,7 @@
 <?
-package("japha.util");
+namespace japha\util;
 
 /**
- * $Id$
- *
  * An object that implements the Enumeration interface generates a series of elements, one at a time. Successive calls to 
  * the nextElement method return successive elements of the series.
  *
@@ -20,13 +18,9 @@ package("japha.util");
  * NOTE: The functionality of this interface is duplicated by the Iterator interface. In addition, Iterator adds an 
  * optional remove operation, and has shorter method names. New implementations should consider using Iterator in 
  * preference to Enumeration. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface Enumeration
 {
 	public function hasMoreElements();
 	public function nextElement();
 }
-?>

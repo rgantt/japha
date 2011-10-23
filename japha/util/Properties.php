@@ -1,12 +1,8 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-/**
- * $Id$
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
- */
+use japha\lang\Object;
+
 class Properties extends Object
 {
     private $props = array();
@@ -36,4 +32,3 @@ class Properties extends Object
         return self::$instance;
     }
 }
-?>

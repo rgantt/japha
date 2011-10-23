@@ -1,18 +1,14 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.io.Serializable");
+use japha\lang\Object;
+use japha\io\_Serializable;
 
 /**
- * $Id$
- *
  * The root class from which all event state objects shall be derived.
  *
  * All Events are constructed with a reference to the object, the "source", that is logically deemed to be the object 
  * upon which the Event in question initially occurred upon.
- *
- * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 class EventObject extends Object implements _Serializable
 {
@@ -45,4 +41,3 @@ class EventObject extends Object implements _Serializable
         return $this->source->toString();
     }
 }
-?>

@@ -1,15 +1,13 @@
 <?
-package("japha.util");
+namespace japha\util;
+
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * <code>abstract class Iterator</code>
  * This class will be inherited by various child iterators.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
+ 
 abstract class _Iterator extends Object
 {
 	/**
@@ -99,4 +97,3 @@ abstract class _Iterator extends Object
 		return $this->END;
 	}
 }
-?>

@@ -1,16 +1,11 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
-import("japha.util.AbstractList");
-import("japha.util.PList");
-import("japha.util.RandomAccess");
-import("japha.lang.Cloneable");
-import("japha.io.Serializable");
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
 
 /**
- * $Id$
- *
  * The Vector class implements a growable array of objects. Like an array, it contains 
  * components that can be accessed using an integer index. However, the size of a Vector can 
  * grow or shrink as needed to accommodate adding and removing items after the Vector has 
@@ -41,9 +36,6 @@ import("japha.io.Serializable");
  * best-effort basis. Therefore, it would be wrong to write a program that depended on this 
  * exception for its correctness: the fail-fast behavior of iterators should be used only to 
  * detect bugs. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Serializable
 {	
@@ -461,4 +453,3 @@ class Vector extends AbstractList implements PList, RandomAccess, Cloneable, _Se
 		return true;
 	}
 }
-?>

@@ -1,12 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.AbstractCollection");
-import("japha.util.Set");
+use japha\lang\Object;
 
 /** 
- * $Id$
- *
  * This class provides a skeletal implementation of the Set interface to minimize the effort required to implement 
  * this interface.
  *
@@ -19,17 +16,13 @@ import("japha.util.Set");
  * implementations for equals and hashCode.
  *
  * This class is a member of the Java Collections Framework. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 abstract class AbstractSet extends AbstractCollection implements Set
 {
     /**
      * Sole constructor
      */
-    public function __construct(){
-    }
+    public function __construct(){}
  
     /**
      * Compares the specified object with this set for equality.

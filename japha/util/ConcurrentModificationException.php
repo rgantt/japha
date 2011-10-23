@@ -1,9 +1,7 @@
 <?
-package("japha.util");
+namespace japha\util;
 
 /**
- * $Id$
- *
  * This exception may be thrown by methods that have detected concurrent modification of an object when such modification 
  * is not permissible.
  *
@@ -22,9 +20,6 @@ package("japha.util");
  * in the presence of unsynchronized concurrent modification. Fail-fast operations throw ConcurrentModificationException 
  * on a best-effort basis. Therefore, it would be wrong to write a program that depended on this exception for its 
  *correctness: ConcurrentModificationException should be used only to detect bugs.
- *
- * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 class ConcurrentModificationException extends _RuntimeException
 {
@@ -54,4 +49,3 @@ class ConcurrentModificationException extends _RuntimeException
         $this->message = $message;   
     }
 }
-?>

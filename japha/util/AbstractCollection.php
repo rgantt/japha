@@ -1,15 +1,8 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
-import("japha.util.Collection");
+use japha\lang\Object;
 
-/** 
- * $Id$
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
- */
 abstract class AbstractCollection extends Object implements Collection
 {
     public function add()
@@ -24,7 +17,7 @@ abstract class AbstractCollection extends Object implements Collection
     }
     
     /**
-     * Add an object to the list
+     * Add an object to the collection
      *
      * @access public
      * @param object The object to add to the Collection
@@ -134,4 +127,3 @@ abstract class AbstractCollection extends Object implements Collection
      */
     //abstract public function iterator();
 }
-?>

@@ -1,7 +1,7 @@
-<?
-package("japha.lang");
+<? 
+namespace japha\lang;
 
-import("japha.io.Serializable");
+use japha\io\_Serializable;
 
 /**
  * $Id$

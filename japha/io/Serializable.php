@@ -1,9 +1,7 @@
 <?
-package("japha.io");
+namespace japha\io;
 
 /**
- * $Id$
- *
  * Serializability of a class is enabled by the class implementing the java.io.Serializable 
  * interface. Classes that do not implement this interface will not have any of their 
  * state serialized or deserialized. All subtypes of a serializable class are themselves 
@@ -68,11 +66,7 @@ package("japha.io");
  * <code>ANY-ACCESS-MODIFIER Object readResolve() throws ObjectStreamException;</code>
  *
  * This readResolve method follows the same invocation rules and accessibility rules as writeReplace. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface _Serializable
 {
 }
-?>

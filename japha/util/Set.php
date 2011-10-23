@@ -1,11 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.Collection");
+use japha\lang\Object;
 
 /** 
- * $Id$
- *
  * A collection that contains no duplicate elements. More formally, sets contain no pair of elements e1 and e2 such that 
  * e1.equals(e2), and at most one null element. As implied by its name, this interface models the mathematical set 
  * abstraction.
@@ -32,9 +30,6 @@ import("japha.util.Collection");
  * for this interface.
  *
  * This interface is a member of the Japha Collections Framework.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 interface Set extends Collection
 {
@@ -54,4 +49,3 @@ interface Set extends Collection
     //public function size();
     //public function toArray( $a );
 }
-?>

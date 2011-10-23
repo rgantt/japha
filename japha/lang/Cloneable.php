@@ -1,9 +1,7 @@
 <?
-package("japha.lang");
+namespace japha\lang;
 
 /**
- * $Id$
- *
  * A class implements the Cloneable interface to indicate to the Object.clone() method that 
  * it is legal for that method to make a field-for-field copy of instances of that class. 
  *
@@ -18,11 +16,7 @@ package("japha.lang");
  * Therefore, it is not possible to clone an object merely by virtue of the fact that 
  * it implements this interface. Even if the clone method is invoked reflectively, there 
  * is no guarantee that it will succeed
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 interface Cloneable
 {
 }
-?>

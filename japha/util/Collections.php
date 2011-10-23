@@ -1,16 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
-import("japha.util.Collection");
-import("japha.util.PList");
-import("japha.util.Vector");
-import("japha.util.Comparator");
-import("japha.util.Enumeration");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * This class consists exclusively of static methods that operate on or return collections. It 
  * contains polymorphic algorithms that operate on collections, "wrappers", which return a new 
  * collection backed by a specified collection, and a few other odds and ends. 
@@ -30,9 +23,6 @@ import("japha.util.Enumeration");
  * These algorithms may, but are not required to, throw this exception if an invocation would 
  * have no effect on the collection. For example, invoking the sort method on an unmodifiable 
  * list that is already sorted may or may not throw UnsupportedOperationException. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 class Collections extends Object
 {

@@ -1,14 +1,10 @@
 <?
-package("japha.util");
+namespace japha\util;
 
 /**
- * $Id$
- *
  * Signals that a resource is missing.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
+
 class MissingResourceException extends _RuntimeException
 {
     private $s;
@@ -41,4 +37,3 @@ class MissingResourceException extends _RuntimeException
         return $this->key;
     }
 }
-?>

@@ -1,9 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
+
+use japha\lang\Object;
 
 /** 
- * $Id$
- *
  * An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
  *
  * This interface takes the place of the Dictionary class, which was a totally abstract class rather than an interface.
@@ -41,9 +41,6 @@ package("japha.util");
  * exceptions are marked as "optional" in the specification for this interface.
  *
  * This interface is a member of the Japha Collections Framework.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 interface Map
 { 
@@ -55,11 +52,11 @@ interface Map
     /**
      * Returns true if this map contains a mapping for the specified key.
      */
-    public function containsKey( Object $key );
+    public function containsKey( $key );
     /**
      * Returns true if this map maps one or more keys to the specified value.
      */
-    public function containsValue( Object $value );
+    public function containsValue( $value );
           
     /**
      * Returns a set view of the mappings contained in this map.
@@ -74,7 +71,7 @@ interface Map
     /**
      * Returns the value to which this map maps the specified key.
      */
-    public function get( Object $key );
+    public function get( $key );
          
     /**
      * Returns the hash code value for this map.
@@ -94,7 +91,7 @@ interface Map
     /**
      * Associates the specified value with the specified key in this map (optional operation).
      */
-    public function put( $key, Object $value );
+    public function put( $key, $value );
           
     /**
      * Copies all of the mappings from the specified map to this map (optional operation).
@@ -104,7 +101,7 @@ interface Map
     /**
      * Removes the mapping for this key from this map if it is present (optional operation).
      */
-    public function remove( Object $key );
+    public function remove( $key );
           
     /**
      * Returns the number of key-value mappings in this map.

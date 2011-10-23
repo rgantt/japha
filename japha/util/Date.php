@@ -1,9 +1,11 @@
 <?
-package("japha.util");
+namespace japha\util;
+
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
 
 /**
- * $Id$
- *
  * The class Date represents a specific instant in time, with millisecond precision.
  *
  * Prior to JDK 1.1, the class Date had two additional functions. It allowed the interpretation of dates as year, month, 
@@ -47,9 +49,6 @@ package("japha.util");
  *
  * In all cases, arguments given to methods for these purposes need not fall within the indicated ranges; for example, 
  * a date may be specified as January 32 and is interpreted as meaning February 1. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 class Date extends Object implements _Serializable, Cloneable, Comparable
 {
@@ -145,4 +144,3 @@ class Date extends Object implements _Serializable, Cloneable, Comparable
      */
     public function toString(){}
 }
-?>

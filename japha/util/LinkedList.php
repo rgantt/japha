@@ -1,12 +1,11 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.AbstractSequentialList");
-import("japha.util.ConcurrentModificationException");
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
 
 /**
- * $Id$
- *
  * Linked list implementation of the List interface. Implements all optional list operations, and permits all elements
  * (including null). In addition to implementing the List interface, the LinkedList class provides uniformly named
  * methods to get, remove and insert an element at the beginning and end of the list. These operations allow linked lists
@@ -18,15 +17,6 @@ import("japha.util.ConcurrentModificationException");
  * All of the operations perform as could be expected for a doubly-linked list. Operations that index into the list will
  * traverse the list from the begining or the end, whichever is closer to the specified index.
  *
- * Note that this implementation is not synchronized. If multiple threads access a list concurrently, and at least one
- * of the threads modifies the list structurally, it must be synchronized externally. (A structural modification is any
- * operation that adds or deletes one or more elements; merely setting the value of an element is not a structural
- * modification.) This is typically accomplished by synchronizing on some object that naturally encapsulates the list.
- * If no such object exists, the list should be "wrapped" using the Collections.synchronizedList method. This is best
- * done at creation time, to prevent accidental unsynchronized access to the list:
- *
- * $list = Collections::synchronizedList( new LinkedList(...) );
- *
  * The iterators returned by the this class's iterator and listIterator methods are fail-fast: if the list is
  * structurally modified at any time after the iterator is created, in any way except through the Iterator's own remove
  * or add methods, the iterator will throw a ConcurrentModificationException. Thus, in the face of concurrent
@@ -37,11 +27,6 @@ import("japha.util.ConcurrentModificationException");
  * any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw
  * ConcurrentModificationException on a best-effort basis. Therefore, it would be wrong to write a program that depended
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
- *
- * This class is a member of the Japha Collections Framework.
- *
- * @author <a href="gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 abstract class LinkedList extends AbstractSequentialList implements PList, Cloneable, Serializable
 {
@@ -654,4 +639,3 @@ class ListItr extends ListIterator
         }
     }
 }
-?>

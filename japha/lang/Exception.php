@@ -1,5 +1,7 @@
 <?
-package("japha.lang");
+namespace japha\lang;
+
+use japha\lang\Throwable;
 
 /**
  * $Id$
@@ -10,7 +12,7 @@ package("japha.lang");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision$
  */
-class _Exception extends Throwable
+class Exception extends Throwable
 {
     /**
 	 * Constructs a new exception with the specified detail message and cause. 

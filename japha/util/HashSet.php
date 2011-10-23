@@ -1,16 +1,12 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.AbstractSet");
-import("japha.lang.Cloneable");
-import("japha.util.Collection");
-import("japha.io.Serializable");
-import("japha.util.Set");
-import("com.japha.iterator.SetIterator");
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
+use com\japha\iterator\SetIterator;
 
 /** 
- * $Id$
- *
  * This class implements the Set interface, backed by a hash table (actually a HashMap instance). It makes no guarantees 
  * as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over 
  * time. This class permits the null  element.
@@ -21,14 +17,6 @@ import("com.japha.iterator.SetIterator");
  * (the number of buckets). Thus, it's very important not to set the initial capacity too high (or the load factor too low) 
  * if iteration performance is important.
  *
- * Note that this implementation is not synchronized. If multiple threads access a set concurrently, and at least one of 
- * the threads modifies the set, it must be synchronized externally. This is typically accomplished by synchronizing on 
- * some object that naturally encapsulates the set. If no such object exists, the set should be "wrapped" using the 
- * Collections.synchronizedSet method. This is best done at creation time, to prevent accidental unsynchronized access to 
- * the HashSet instance:
- *
- * $s = Collections::synchronizedSet( new HashSet(...) );
- *
  * The iterators returned by this class's iterator method are fail-fast: if the set is modified at any time after the 
  * iterator is created, in any way except through the iterator's own remove method, the Iterator throws a 
  * ConcurrentModificationException. Thus, in the face of concurrent modification, the iterator fails quickly and cleanly, 
@@ -38,11 +26,6 @@ import("com.japha.iterator.SetIterator");
  * any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw 
  * ConcurrentModificationException on a best-effort basis. Therefore, it would be wrong to write a program that depended 
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
- *
- * This class is a member of the Japha Collections Framework.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 abstract class HashSet extends AbstractSet implements Cloneable, Serializable, Set
 {
@@ -180,4 +163,3 @@ abstract class HashSet extends AbstractSet implements Cloneable, Serializable, S
      */
     //public function _clone(){}
 }
-?>

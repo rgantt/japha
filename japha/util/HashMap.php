@@ -1,15 +1,11 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.AbstractMap");
-import("japha.util.AbstractSet");
-import("japha.lang.Cloneable");
-import("japha.util.Map");
-import("japha.io.Serializable");
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
 
 /** 
- * $Id$
- *
  * Hash table based implementation of the Map interface. This implementation provides all of the optional map operations, 
  * and permits null values and the null key. (The HashMap class is roughly equivalent to Hashtable, except that it is 
  * unsynchronized and permits nulls.) This class makes no guarantees as to the order of the map; in particular, it does 
@@ -35,16 +31,6 @@ import("japha.io.Serializable");
  *
  * If many mappings are to be stored in a HashMap instance, creating it with a sufficiently large capacity will allow the 
  * mappings to be stored more efficiently than letting it perform automatic rehashing as needed to grow the table.
- *
- * Note that this implementation is not synchronized. If multiple threads access this map concurrently, and at least one 
- * of the threads modifies the map structurally, it must be synchronized externally. (A structural modification is any 
- * operation that adds or deletes one or more mappings; merely changing the value associated with a key that an instance 
- * already contains is not a structural modification.) This is typically accomplished by synchronizing on some object 
- * that naturally encapsulates the map. If no such object exists, the map should be "wrapped" using the 
- * Collections.synchronizedMap method. This is best done at creation time, to prevent accidental unsynchronized access 
- * to the map:
- *
- * $m = Collections::synchronizedMap( new HashMap(...) );
  * 
  * The iterators returned by all of this class's "collection view methods" are fail-fast: if the map is structurally 
  * modified at any time after the iterator is created, in any way except through the iterator's own remove or add methods, 
@@ -58,11 +44,8 @@ import("japha.io.Serializable");
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
  *
  * This class is a member of the Japha Collections Framework. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
-abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializable
+class HashMap extends AbstractMap implements Cloneable, Map, _Serializable
 {
     public function __construct()
     {
@@ -148,7 +131,7 @@ abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializab
     /**
      * Returns true if this map contains a mapping for the specified key.
      */
-    public function containsKey( Object $key )
+    public function containsKey( $key )
     {
         return parent::containsKey( $key );
     }
@@ -156,7 +139,7 @@ abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializab
     /**
      * Returns true if this map maps one or more keys to the specified value.
      */
-    public function containsValue( Object $value )
+    public function containsValue( $value )
     {
         return parent::containsValue( $value );
     }
@@ -164,7 +147,7 @@ abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializab
     /**
      * Returns the value to which the specified key is mapped in this identity hash map, or null if the map contains no mapping for this key.
      */
-    public function get( Object $key )
+    public function get( $key )
     {
         return parent::get( $key );
     }
@@ -196,7 +179,7 @@ abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializab
      *
      * Should be Object, Object, but sometimes we don't want only Object keys
      */
-    public function put( $key, Object $value )
+    public function put( $key, $value )
     {
         parent::put( $key, $value );
     }
@@ -212,7 +195,7 @@ abstract class HashMap extends AbstractMap implements Cloneable, Map, Serializab
     /**
      * Removes the mapping for this key from this map if present.
      */
-    public function remove( Object $key ){}
+    public function remove( $key ){}
          
     /**
      * Returns the number of key-value mappings in this map. 
@@ -255,7 +238,7 @@ class KeySet extends AbstractSet
         return $this->map->containsKey( $o );
     }
     
-    public function remove( Object $o ) 
+    public function remove( $o ) 
     {
             return $this->map->removeEntryForKey( $o ) != null;
     }
@@ -320,4 +303,3 @@ class KeyIterator extends HashIterator
         parent::__construct();       
     }
 }
-?>

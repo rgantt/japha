@@ -1,5 +1,5 @@
 <?
-package("japha.lang");
+namespace japha\lang;
 
 /**
  * $Id$
@@ -11,7 +11,7 @@ package("japha.lang");
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision$
  */
-class Object extends Exception
+class Object
 {    
     static $class;
     

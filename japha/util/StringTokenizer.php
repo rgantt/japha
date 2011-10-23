@@ -1,13 +1,10 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import('japha.lang.Object');
-import('japha.util.Enumeration');
-import('japha.lang.StringBuffer');
+use japha\lang\Object;
+use japha\lang\StringBuffer;
 
 /**
- * $Id$
- *
  * The string tokenizer class allows an application to break a string into 
  * tokens. The tokenization method is much simpler than the one used by the 
  * StreamTokenizer class. The StringTokenizer methods do not distinguish among 
@@ -33,52 +30,48 @@ import('japha.lang.StringBuffer');
  *
  * A token is returned by taking a substring of the string that was used to 
  * create the StringTokenizer object. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 class StringTokenizer extends Object implements Enumeration
 {
-		private $pos = 0;
+	private $pos = 0;
 
-		private $tokens = array();
+	private $tokens = array();
 
-		function __construct( $string, $separator ) 
+	function __construct( $string, $separator ) 
+	{
+		if ( !is_string( $string ) )
 		{
-			if ( !is_string( $string ) )
-			{
-				throw new Exception('StringTokenizer::__construct() requires a String');
-			}
-			$this->tokens = explode( $separator, $string );
+			throw new Exception('StringTokenizer::__construct() requires a String');
 		}
+		$this->tokens = explode( $separator, $string );
+	}
 
-		function countTokens() 
-		{
-			return sizeof( $this->tokens );
-		}
+	function countTokens() 
+	{
+		return sizeof( $this->tokens );
+	}
 
-		function hasMoreElements()
-		{
-			return $this->hasMoreTokens();
-		}
+	function hasMoreElements()
+	{
+		return $this->hasMoreTokens();
+	}
 
-		function hasMoreTokens() 
-		{
-			return ( $this->pos < sizeof( $this->tokens ) );
-		}
+	function hasMoreTokens() 
+	{
+		return ( $this->pos < sizeof( $this->tokens ) );
+	}
 
-		function nextElement() 
+	function nextElement() 
+	{
+		return $this->nextToken();
+	}
+
+	function nextToken() 
+	{
+		if ( $this->pos > sizeof( $this->tokens ) )
 		{
-			return $this->nextToken();
+			throw new Exception("Array index out of bounds in StringTokenizer::nextToken()");
 		}
-		
-		function nextToken() 
-		{
-			if ( $this->pos > sizeof( $this->tokens ) )
-			{
-				throw new Exception("Array index out of bounds in StringTokenizer::nextToken()");
-			}
-			return $this->tokens[ $this->pos++ ];
-		}
-	 }
-?>
+		return $this->tokens[ $this->pos++ ];
+	}
+}

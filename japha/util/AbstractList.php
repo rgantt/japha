@@ -1,13 +1,10 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.Collection");
-import("japha.util.PList");
-import("com.japha.iterator.ListIterator");
+use japha\lang\Object;
+use com\japha\iterator\ListIterator;
 
 /**
- * $Id$
- *
  * This class provides a skeletal implementation of the List interface to minimize the effort
  * required to implement this interface backed by a "random access" data store (such as an array).
  * For sequential access data (such as a linked list), AbstractSequentialList should be used in
@@ -32,9 +29,6 @@ import("com.japha.iterator.ListIterator");
  * The documentation for each non-abstract methods in this class describes its implementation in detail.
  * Each of these methods may be overridden if the collection being implemented admits a
  * more efficient implementation.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 abstract class AbstractList extends Object implements Collection, PList
 {
@@ -550,4 +544,3 @@ abstract class AbstractList extends Object implements Collection, PList
      	return $this->list;
 	}
 }
-?>

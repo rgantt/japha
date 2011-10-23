@@ -1,15 +1,11 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.AbstractList");
-import("japha.lang.Cloneable");
-import("japha.util.PList");
-import("japha.util.RandomAccess");
-import("japha.io.Serializable");
+use japha\lang\Object;
+use japha\lang\Cloneable;
+use japha\io\_Serializable;
 
 /** 
- * $Id$
- *
  * Resizable-array implementation of the List interface. Implements all optional list operations, and permits all 
  * elements, including null. In addition to implementing the List interface, this class provides methods to manipulate 
  * the size of the array that is used internally to store the list. (This class is roughly equivalent to Vector, except 
@@ -47,11 +43,6 @@ import("japha.io.Serializable");
  * any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw 
  * ConcurrentModificationException on a best-effort basis. Therefore, it would be wrong to write a program that depended 
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
- *
- * This class is a member of the Japha Collections Framework. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 class ArrayList extends AbstractList implements PList, RandomAccess, Cloneable, _Serializable
 {
@@ -197,5 +188,4 @@ class ArrayList extends AbstractList implements PList, RandomAccess, Cloneable, 
     public function removeAll( Collection $c ){}
     public function retainAll( Collection $c ){}
     public function subList( $start, $end ){}
- }
-?>
+}

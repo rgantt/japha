@@ -1,11 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * A comparison function, which imposes a total ordering on some collection of objects. Comparators 
  * can be passed to a sort method (such as Collections.sort) to allow precise control over the 
  * sort order. Comparators can also be used to control the order of certain data structures (such 
@@ -50,13 +48,9 @@ import("japha.lang.Object");
  * natural ordering is the equivalence relation defined by the objects' equals(Object) method(s):
  *
  *      {(x, y) such that x.equals((Object)y)}.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface Comparator
 {
 	public function compare( Object $obj1, Object $obj2 );
 	public function equals( Object $obj );
 }
-?>

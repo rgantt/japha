@@ -1,12 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
-import("japha.util.AbstractList");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * This class provides a skeletal implementation of the List interface to minimize the effort 
  * required to implement this interface backed by a "sequential access" data store (such as a 
  * linked list). For random access data (such as an array), AbstractList should be used in 
@@ -27,9 +24,6 @@ import("japha.util.AbstractList");
  *
  * The programmer should generally provide a void (no argument) and collection constructor, as 
  * per the recommendation in the Collection interface specification. 
- * 
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 abstract class AbstractSequentialList extends AbstractList
 {
@@ -71,4 +65,3 @@ abstract class AbstractSequentialList extends AbstractList
 	//public function set( $index, Object $element ){}
 	//public function addAll( $index, Collection $c ){}
 }
-?>

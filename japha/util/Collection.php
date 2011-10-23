@@ -1,9 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
+
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * The root interface in the collection hierarchy. A collection represents a group of 
  * objects, known as its elements. Some collections allow duplicate elements and 
  * others do not. Some are ordered and others unordered. The SDK does not provide 
@@ -45,9 +45,6 @@ package("japha.util");
  * element into the collection may throw an exception or it may succeed, at the option
  * of the implementation. Such exceptions are marked as "optional" in the specification
  * for this interface.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface Collection
 {

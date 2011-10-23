@@ -1,11 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.Map");
+use japha\lang\Object;
 
 /** 
- * $Id$
- *
  * This class provides a skeletal implementation of the Map interface, to minimize the effort required to 
  * implement this interface.
  *
@@ -25,9 +23,6 @@ import("japha.util.Map");
  * of these methods may be overridden if the map being implemented admits a more efficient implementation.
  *
  * This class is a member of the Japha Collections Framework.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 abstract class AbstractMap extends Object implements Map
 {
@@ -49,7 +44,7 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns true if this map contains a mapping for the specified key.
      */
-    public function containsKey( Object $key )
+    public function containsKey( $key )
     {
         return array_key_exists( $key, $this->map );
     }
@@ -57,7 +52,7 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns true if this map maps one or more keys to this value.
      */
-    public function containsValue( Object $value )
+    public function containsValue( $value )
     {
         return in_array( $value, $this->map );
     }
@@ -84,7 +79,7 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Returns the value to which this map maps the specified key.
      */
-    public function get( Object $key )
+    public function get( $key )
     {
         if( $this->containsKey( $key ) )
         {
@@ -117,7 +112,7 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Associates the specified value with the specified key in this map (optional operation).
      */
-    public function put( $key, Object $value )
+    public function put( $key, $value )
     {
         $this->map[ $key ] = $value;
     }
@@ -137,7 +132,7 @@ abstract class AbstractMap extends Object implements Map
     /**
      * Removes the mapping for this key from this map if present (optional operation).
      */
-    public function remove( Object $key )
+    public function remove( $key )
     {
         if( $this->containsKey( $key ) )
         {
@@ -184,5 +179,9 @@ abstract class AbstractMap extends Object implements Map
      * Returns a set view of the mappings contained in this map.
      */
     abstract public function entrySet();
+	
+		
+	protected function hash( $key, $iteration ) {
+	}
 }
 ?>

@@ -1,11 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.lang.Object");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * Marker interface used by List implementations to indicate that they support fast (generally 
  * constant time) random access. The primary purpose of this interface is to allow generic 
  * algorithms to alter their behavior to provide good performance when applied to either random 
@@ -31,11 +29,7 @@ import("japha.lang.Object");
  *
  *    for (Iterator i=list.iterator(); i.hasNext(); )
  *        i.next();
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface RandomAccess
 {
 }
-?>

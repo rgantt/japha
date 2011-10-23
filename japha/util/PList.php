@@ -1,11 +1,9 @@
 <?
-package("japha.util");
+namespace japha\util;
 
-import("japha.util.Collection");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * An ordered collection (also known as a sequence). The user of this interface has 
  * precise control over where in the list each element is inserted. The user can access 
  * elements by their integer index (position in the list), and search for elements in 
@@ -57,9 +55,6 @@ import("japha.util.Collection");
  * ineligible element into the list may throw an exception or it may succeed, at the 
  * option of the implementation. Such exceptions are marked as "optional" in the 
  * specification for this interface. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
 interface PList extends Collection
 {
@@ -84,4 +79,3 @@ interface PList extends Collection
     //public function size();
     //public function toArray();
 }
-?>
