@@ -1,46 +1,6 @@
-/*********************************************
- *              Japha 1.0                    *
- *            by: Ryan Gantt                 *
- *                                           *
- *         http://japha.xzon.net/            *
- *                                           *
- * Donations and other forms of appreciation *
- *     are... well.. appreciated             *
- *********************************************/
- 
-1) What is Japha?
-    a) Origins
-    b) Motives
-    
-2) Requirements
-    a) Why PHP 5?
-    b) Backwards Compatibility?
-    c) Man, what a low blow
-    
-3) How-To
-    a) When to use it
-    b) Why to use it
-    c) How to use it
-    
-4) Package/Class Overview
-    a) http
-    b) io
-    c) iterator
-    d) lang
-    e) pdbc
-    f) swing
-    g) util
-    h) xml
-    
-5) Importing Packages and Classes
-    a) Packages
-    b) Classes
-    c) Head's-Up's
-    
--------------------
+JAPHA by Ryan Gantt
 
 1) WHAT IS JAPHA?
------------------
 
 Japha is a free, open-source API for php that is loosely based on some of the most
 (in my opinion Fundamental) classes in the Java API. The Japha API is lightweight,
@@ -51,8 +11,7 @@ may have. It's also self-reliant (for the most part), meaning that you don't nee
 all of the classes to use some of the classes (See the Head's-Up's for more information
 on some issues with this)
 
-1.a) Origins
-------------
+Origins
 
 All of the classes in the Japha API can be traced back to classes in the Java 1.4.1 API.
 The primary reason for this is the maturity of the Java API, and the wide range of classes
@@ -60,15 +19,6 @@ that it contains. This is not a blow to PHP in any way -- PHP has TONS of built-
 functions (function, mind you, not classes) that allow many of these operations to be
 executed. However, these functions are not necessarily grouped in an optimal fashion,
 which can lead to farts in productivity.
-
-What about PEAR?
-
-Well, Japha is definately NOT a solution/replacement for PEAR. PEAR has far more people
-working on it, it's organized into many little sub-categories, and it's basically just
-a nightmare to work with. This is not a slam on the PEAR team, they are doing a great
-job -- It's just hard to build a set of Patterns in a language that wasn't meant for them
-and then try to distribute those patterns in an easy way. But they have done what they
-could for their part.
 
 Why Java?
 
@@ -81,57 +31,10 @@ seem to be geared to Java-like syntax and Java-like functionality. I figured it 
 counter-productive to create classes for a Java-like language that were based on classes
 in a completely different langage (say Python, or some of the .NET-geared languages).
 
-1.b) Motives
-------------
+Motives
 
 When I first created an api to reuse in my projects, all I wanted to do was save myself
 some time (like any pragmatically minded programmer would =]) and learn some of the ins
 and outs of PHP 5 at the same time. As it turns out, I realized that if I am going to
 be able to reuse these classes in my scripts and project, then, hey, there has to
-be some other people out there looking for the same thing that I am, right? I mean,
-great minds do think alike ( ;] ).
-
-_______________________
-
-2) Requirements
----------------
-
-Ideal system settings for use of these classes:
-Recommended Settings:
----------------------
-Apache 2.0.45
-The latest builds of PHP 5/Zend 2
-OS Independent (preferably a system that operates)
-
-As I know that no one rebuilds their PHP and Apache installs every day, here are the
-Required settings:
-------------------
-Apache 1.3
-PHP 5.0/Zend 2.0
-
-
-2.a) Why PHP 5?
----------------
-Because PHP 5 is the only version that supports interfaces and abstract classes.
-
-The object-oriented aspects of PHP 5 are so sweet that it makes you wonder why I 
-WOULDN'T be doing this on PHP 5.
-
-2.b) Backwards Compatibility
-----------------------------
-No. You must have PHP 5.0/Zend 2.0.
-
-Unless you want to go through the whole thing and change all of the interfaces and
-abstract classes, member protection keywords, constructors, destructors, object passing
-and other nuances. I don't recommend it. It would, in all probability, take you longer to
-port this API back to PHP 4 than it took me to write it into PHP 5.
-
-2.c) Man, what a low Blow
--------------------------
-MMmmm, Hmmm.
-
-Just think of it as a really good excuse to upgrade! Just go tell your friendly 
-neighborhood sys-admin to upgrade PHP for you! He'll be happy to oblige, or else you
-will be happy to revoke your account and find someone who ISN'T too lazy to upgrade.
-
-=]
+be some other people out there looking for the same thing that I am, right?
