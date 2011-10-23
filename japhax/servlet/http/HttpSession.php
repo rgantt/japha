@@ -1,14 +1,9 @@
-<?
-package("japhax.servlet.http");
+<?php
+namespace japhax\servlet\http;
 
-/** 
- * $Id$
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
- */
-class HttpSession extends Object
-{
+use japha\lang\Object;
+
+class HttpSession extends Object {
     /**
      * ID Number of the current Session
      *
@@ -32,8 +27,7 @@ class HttpSession extends Object
 	 *
 	 * @access public
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		session_set_cookie_params(0, dirname($_SERVER['PHP_SELF']));
 		session_start();
 		$this->id = session_id();
@@ -45,8 +39,7 @@ class HttpSession extends Object
 	 *
 	 * @return int The ID of the current session
 	 */
-	public function getId()
-	{
+	public function getId()	{
 		return $this->id;
 	}
 
@@ -56,8 +49,7 @@ class HttpSession extends Object
 	 * @access public
 	 * @return String Server time in a format
 	 */
-	public function getCreationTime()
-	{
+	public function getCreationTime() {
 		return $this->creationTime;
 	}
 
@@ -68,8 +60,7 @@ class HttpSession extends Object
 	 * @access public
 	 * @return String the value of the found attribute
 	 */
-	public function getAttribute($name)
-	{
+	public function getAttribute( $name ) {
 		return $_SESSION[$name];
 	}
 
@@ -80,8 +71,7 @@ class HttpSession extends Object
 	 * @param value the value to add to the array
 	 * @access public
 	 */
-	public function setAttribute($name, $value)
-	{
+	public function setAttribute( $name, $value ) {
 		$_SESSION[$name] = $value;
 	}
 
@@ -91,8 +81,7 @@ class HttpSession extends Object
 	 * @access public
 	 * @param name The key to remove from the array
 	 */
-	public function removeAttribute($name)
-	{
+	public function removeAttribute( $name ) {
 		unset($_SESSION[$name]);
 	}
 
@@ -103,8 +92,7 @@ class HttpSession extends Object
 	 *
 	 * @access public
 	 */
-	public function invalidate()
-	{
+	public function invalidate() {
 		$_SESSION = array();
 		unset($_COOKIE[session_name()]);
 		session_destroy();
@@ -116,8 +104,7 @@ class HttpSession extends Object
 	 * @access public
 	 * @return String[] An array of all the attribute names in the Session
 	 */
-	public function getAttributeNames()
-	{
+	public function getAttributeNames() {
 		return array_keys($_SESSION);
 	}
 
@@ -127,8 +114,6 @@ class HttpSession extends Object
 	 * @access public
 	 * @return boolean true iff the session is a new session
 	 */
-	public function isNew()
-	{
+	public function isNew()	{
 	}
 }
-?>

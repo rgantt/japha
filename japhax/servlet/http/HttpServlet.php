@@ -1,17 +1,10 @@
-<?
-package("japhax.servlet.http");
+<?php
+namespace japhax\servlet\http;
 
-import("japhax.servlet.GenericServlet");
-import("japha.io.Serializable");
+use japhax\servlet\GenericServlet;
+use japha\io\_Serializable;
 
-/** 
- * $Id$
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
- */
-abstract class HttpServlet extends GenericServlet implements _Serializable
-{
+abstract class HttpServlet extends GenericServlet implements _Serializable {
 	abstract protected function doDelete( HttpServletRequest $req, HttpServletResponse $resp );
 	abstract protected function doGet( HttpServletRequest $req, HttpServletResponse $resp );
 	abstract protected function doHead( HttpServletRequest $req, HttpServletResponse $resp );
@@ -22,4 +15,3 @@ abstract class HttpServlet extends GenericServlet implements _Serializable
 	abstract protected function getLastModified( HttpServletRequest $req );
 	//abstract protected function service( HttpServletRequest $req, HttpServletResponse $resp );
 }
-?>

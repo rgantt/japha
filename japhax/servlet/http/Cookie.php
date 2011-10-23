@@ -1,16 +1,10 @@
-<?
-package("japhax.servlet.http");
+<?php
+namespace japhax\servlet\http;
 
 /**
- * $Id$
- *
  * Cookies. Manage, edit, delete, set cookies.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-class Cookie
-{
+class Cookie {
 	/**
 	 * The String identifier of the current cookie
 	 */
@@ -34,14 +28,11 @@ class Cookie
 	 * @param name The name of the cookie (defaults to null)
 	 * @param value The value of the cookie (defaults to null)
 	 */
-	public function __construct( $name = null, $value = null )
-	{
-		if(isset($name))
-		{
+	public function __construct( $name = null, $value = null ) {
+		if( isset( $name ) ) {
 			$this->name = $name;
 		}
-		if(isset($value))
-		{
+		if( isset( $value ) ) {
 			$this->value = $value;
 		}
 	}
@@ -53,8 +44,7 @@ class Cookie
 	 * @access public
 	 * @param name The name of the cookie
 	 */
-	public function setName( $name )
-	{
+	public function setName( $name ) {
 		$this->name = $name;
 	}
 
@@ -65,8 +55,7 @@ class Cookie
 	 * @access public
 	 * @return String The name of the cookie
 	 */
-	public function getName()
-	{
+	public function getName() {
 		return $this->name;
 	}
 
@@ -77,8 +66,7 @@ class Cookie
 	 * @access public
 	 * @param value The value of the current cookie
 	 */
-	public function setValue( $value )
-	{
+	public function setValue( $value ) {
 		$this->value = $value;
 	}
 
@@ -88,8 +76,7 @@ class Cookie
 	 * @access public
 	 * @return String The value of the current cookie
 	 */
-	public function getValue()
-	{
+	public function getValue() {
 		return $this->value;
 	}
 
@@ -99,10 +86,8 @@ class Cookie
 	 * @access public
 	 * @param seconds The number of seconds that the cookie is going to stay on the client computer
 	 */
-	public function setTimeout( $seconds )
-	{
-		if(is_integer($seconds))
-		{
+	public function setTimeout( $seconds ) {
+		if( is_integer( $seconds ) ) {
 			$this->seconds = $seconds;
 		}
 	}
@@ -113,8 +98,7 @@ class Cookie
 	 * @access public
 	 * @return int The number of seconds that the cookie will remain on the client computer
 	 */
-	public function getTimeout()
-	{
+	public function getTimeout() {
 		return $this->timeout;
 	}
 
@@ -127,14 +111,12 @@ class Cookie
 	public function saveCookie()
 	{
 		# To do -- Add more options here (secure, paths, etc.)
-		if(!headers_sent())
-		{
-			setcookie($this->name, $this->value, $this->timeout);
+		if( !headers_sent() ) {
+			setcookie( $this->name, $this->value, $this->timeout );
 		}
 	}
 
-	public function updateCookie()
-	{
+	public function updateCookie() {
 		$this->saveCookie();
 	}
 
@@ -143,8 +125,7 @@ class Cookie
 	 *
 	 * @access public
 	 */
-	public function deleteCookie()
-	{
+	public function deleteCookie() {
 		unset($_COOKIE[$this->name]);
 	}
 
@@ -155,8 +136,7 @@ class Cookie
 	 * @param name The key (name) of the cookie to check
 	 * @return bool True iff the cookie $name already exists on the server/client
 	 */
-	public function cookieExists( $name )
-	{
+	public function cookieExists( $name ) {
 		return isset($_COOKIE[$name]);
 	}
 
@@ -166,9 +146,7 @@ class Cookie
 	 * @access public
 	 * @return bool True iff the current cookie already exists on the client's computer
 	 */
-	public function currentCookieExists()
-	{
+	public function currentCookieExists() {
 		return $this->cookieExists( $this->name );
 	}
 }
-?>

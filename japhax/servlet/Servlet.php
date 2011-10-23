@@ -1,9 +1,7 @@
-<?
-package("japhax.servlet");
+<?php
+namespace japhax\servlet;
 
 /**
- * $Id$
- *
  * To implement this interface, you can write a generic servlet that extends 
  * javax.servlet.GenericServlet or an HTTP servlet that extends javax.servlet.http.HttpServlet. 
  *
@@ -19,12 +17,8 @@ package("japhax.servlet");
  * which the servlet can use to get any startup information, and the getServletInfo method, 
  * which allows the servlet to return basic information about itself, such as author, version, 
  * and copyright.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-interface Servlet
-{
+interface Servlet {
 	/**
 	 * Called by the servlet container to indicate to a servlet that the servlet is being 
 	 * taken out of service. This method is only called once all threads within the 

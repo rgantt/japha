@@ -1,16 +1,7 @@
-<?
-package('japhax.servlet.http');
+<?php
+namespace japhax\servlet\http;
 
-import('japhax.servlet.http.HttpServletResponse');
-
-/** 
- * $Id$
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
- */
-class HttpServletResponseWrapper implements HttpServletResponse
-{
+class HttpServletResponseWrapper implements HttpServletResponse {
 	/**
 	 * Sends out an HTTP header. If headers have already been sent out, then an exception is thrown.
 	 *
@@ -19,14 +10,10 @@ class HttpServletResponseWrapper implements HttpServletResponse
 	 * @param value value of the header to add... Ex "Location: index.html", location is name, index.html is value
 	 * @throws HeadersSentException if the headers have already been sent out
 	 */
-	public function addHeader( $name, $value )
-	{
-		if (!headers_sent())
-		{
+	public function addHeader( $name, $value ) {
+		if (!headers_sent()) {
 			header( $name . ": " . $value);
-		}
-	    else
-	    {
+		} else {
 	        throw new HeadersSentException("Headers have already been sent out in HttpResponse::addHeader()!");
 	    }
 	}
@@ -37,8 +24,7 @@ class HttpServletResponseWrapper implements HttpServletResponse
 	 * @access public
 	 * @param cookie Cookie object that is to be sent out
 	 */
-	public function addCookie( Cookie $cookie = null )
-	{
+	public function addCookie( Cookie $cookie = null ) {
 		$cookie->saveCookie();
 	}
 
@@ -49,14 +35,10 @@ class HttpServletResponseWrapper implements HttpServletResponse
      * @param contentType the content type to set the page to
      * @throws HeadersSentException if the headers have already been sent out
      */
-	public function setContentType($contentType)
-	{
-		if (!headers_sent())
-		{
+	public function setContentType( $contentType ) {
+		if ( !headers_sent() ) {
 			header('Content-type: ' . $contentType);
-		}
-	    else
-	    {
+		} else {
 	        throw new HeadersSentException("Headers have already been sent out in HttpResponse::setContentType()!");
 	    }
 	}
@@ -68,16 +50,11 @@ class HttpServletResponseWrapper implements HttpServletResponse
 	 * @param location the URI to redirect to
 	 * @throws HeadersSentException if the headers have already been sent out
 	 */
-	public function sendRedirect($location)
-	{
-	    if(!headers_sent())
-	    {
+	public function sendRedirect( $location ) {
+	    if( !headers_sent() ) {
 	       header("Location: " . $location);
-	    }
-	    else
-	    {
+	    } else {
 	        throw new HeadersSentException("Headers have already been sent out in HttpResponse::setRedirect()!");
 	    }
 	}
 }
-?>

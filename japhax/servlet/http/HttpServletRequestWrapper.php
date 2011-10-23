@@ -1,22 +1,14 @@
-<?
-package('japhax.servlet.http');
+<?php
+namespace japhax\servlet\http;
 
-import('japhax.servlet.http.HttpServletRequest');
-import('japhax.servlet.http.HttpSession');
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * This class is the interface to all the requests of the http protocol.
  * Most of the work is actually done by PHP to setup the variables, so this
  * class is just an interface to that PHP layer.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
- * @based on a class by Dan Allen
  */
-class HttpServletRequestWrapper extends Object implements HttpServletRequest
-{
+class HttpServletRequestWrapper extends Object implements HttpServletRequest {
 	/**
 	 * Default port uses for regular (insecure) requests
 	 * 
@@ -54,19 +46,15 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 *
 	 * @access public
 	 */
-	public function HttpRequest()
-	{
+	public function HttpRequest() {
 		$this->headers = getallheaders();
-		switch ( $this->getMethod() )
-		{
-			case 'GET':
-			{
+		switch ( $this->getMethod() ) {
+			case 'GET':	{
 				$this->parameters = $_GET;
 				break;
 			}
 			default:
-			case 'POST':
-			{
+			case 'POST': {
 				$this->parameters = $_POST;
 				break;
 			}
@@ -79,8 +67,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @access public
 	 * @return String[] An array of all of the parameter names
 	 */
-	public function getParameterNames()
-	{
+	public function getParameterNames()	{
 		return array_keys( $this->parameters );
 	}
 	
@@ -92,10 +79,8 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @param name The key of the value in the parameters array
 	 * @access public
 	 */
-	public function getParameter( $name )
-	{
-		if ( isset( $this->parameters[ $name ] ) )
-		{
+	public function getParameter( $name ) {
+		if ( isset( $this->parameters[ $name ] ) ) {
 			return $this->parameters[ $name ];
 		}
 		return null;
@@ -108,11 +93,9 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @param name The key of the parameter
 	 * @param value The value of the parameter
 	 */
-	public function setParameter( $name, $value )
-	{
-		if ( is_null( $value ) )
-		{
-			$this->removeParamter( $name );
+	public function setParameter( $name, $value ) {
+		if ( is_null( $value ) ) {
+			$this->removeParameter( $name );
 			return;
 		}
 		$this->parameters[ $name ] = $value;
@@ -124,8 +107,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @access public
 	 * @param name The key of the parameter you want to remove
 	 */
-	public function removeParameter( $name )
-	{
+	public function removeParameter( $name ) {
 		unset( $this->parameters[ $name ] );
 	}
 
@@ -136,8 +118,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @param name Key of the parameter to check
 	 * @return boolean true iff the key exists and there is a real value
 	 */
-	public function parameterExists( $name )
-	{
+	public function parameterExists( $name ) {
 		return isset( $this->parameters[$name] );
 	}
 
@@ -147,8 +128,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @access public
 	 * @return	String the method used -- GET or POST
 	 */
-	public function getMethod()
-	{
+	public function getMethod() {
 		return isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : false;
 	}
 
@@ -159,11 +139,9 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return Session a new instance of session, unless one already exists
 	 * @singleton
 	 */
-	public function getSession()
-	{
+	public function getSession() {
 		static $instance = false;
-		if ( !$instance )
-		{
+		if ( !$instance ) {
 			$instance = new HttpSession();
 		}
 		return $instance;
@@ -176,8 +154,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return string The requests URL
 	 * @access public
 	 */
-	public function getRequestUri()
-	{
+	public function getRequestUri() {
 		// php's request uri includes the query string, so let's strip it
 		list( $requestUri ) = explode( '?', $_SERVER['REQUEST_URI'] );
 		return $requestUri;
@@ -191,8 +168,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @access public
 	 * @return String http or https, depending on whether or not we are in secure mode
 	 */
-	public function getScheme()
-	{
+	public function getScheme() {
 		return ( 'http' . ( ( $this->isSecure() ) ? 's' : '' ) );
 	}
 
@@ -204,15 +180,11 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String Rebuilds and returns the path to the current server
 	 * @access public
 	 */
-	public function getRequestUrl()
-	{
+	public function getRequestUrl() {
 		$port = $this->getServerPort();
-		if ($port == DEFAULT_PORT || $port == DEFAULT_SECURE_PORT)
-		{
+		if ($port == DEFAULT_PORT || $port == DEFAULT_SECURE_PORT) {
 			$port = '';
-		}
-		else
-		{
+		} else {
 			$port = ':' . $port;
 		}
 		return $this->getScheme() . '://' . $this->getServerName() . $port . $this->getRequestUri();
@@ -224,8 +196,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The hostname of the server
 	 * @access public
 	 */
-	public function getServerName()
-	{
+	public function getServerName() {
 		return $_SERVER['SERVER_NAME'];
 	}
 
@@ -235,8 +206,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return int The port on which the request was made
 	 * @access public
 	 */
-	public function getServerPort()
-	{
+	public function getServerPort() {
 		return $_SERVER['SERVER_PORT'];
 	}
 
@@ -247,8 +217,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return boolean true if we are in https (secure) mode
 	 * @access public
 	 */
-	public function isSecure()
-	{
+	public function isSecure() {
 		return !empty( $_SERVER['HTTPS'] );
 	}
 
@@ -259,8 +228,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The hostname of the client
 	 * @access public
 	 */
-	public function getRemoteHost()
-	{
+	public function getRemoteHost() {
 		return $_SERVER['REMOTE_HOST'];
 	}
 
@@ -270,8 +238,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The ip address of the client
 	 * @access public
 	 */
-	public function getRemoteAddr()
-	{
+	public function getRemoteAddr() {
 		return $_SERVER['REMOTE_ADDR'];
 	}
 
@@ -282,8 +249,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The accepted locale of the client
 	 * @access public
 	 */
-	public function getLocale()
-	{
+	public function getLocale() {
 		return $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 	}
 
@@ -293,8 +259,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String Complete path to the requested script
 	 * @access public
 	 */
-	public function getRealPath()
-	{
+	public function getRealPath() {
 		return $_SERVER['SCRIPT_FILENAME'];
 	}
 
@@ -304,13 +269,11 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The part of this request's Url that calls the script
 	 * @access public
 	 */
-	public function getScriptPath()
-	{
+	public function getScriptPath() {
 		return $_SERVER['SCRIPT_NAME'];
 	}
 	
-	public function getServletPath()
-	{
+	public function getServletPath() {
 		return $this->getScriptPath();
 	}
 
@@ -321,12 +284,10 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String Returns a short version of the scriptPath
 	 * @access public
 	 */
-	public function getPathInfo()
-	{
+	public function getPathInfo() {
 		$requestUri = $this->getRequestUri();
 		$scriptPath = $this->getScriptPath();
-		if ( strlen( $requestUri ) == strlen( $scriptPath ) )
-		{
+		if ( strlen( $requestUri ) == strlen( $scriptPath ) ) {
 			return null;
 		}
 		return substr( $requestUri, strlen( $scriptPath ) );
@@ -338,13 +299,11 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String The query string after the URL of the request
 	 * @access public
 	 */
-	public function getQueryString()
-	{
+	public function getQueryString() {
 		return $_SERVER['QUERY_STRING'];
 	}
 	
-	public function getContextPath()
-	{
+	public function getContextPath() {
 		return $this->getQueryString();
 	}
 
@@ -355,8 +314,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String Get the value of the specified request header
 	 * @access public
 	 */
-	public function getHeader($name)
-	{
+	public function getHeader( $name ) {
 		return isset( $this->headers[ $name ] ) ? $this->headers[ $name ] : null;
 	}
 
@@ -366,9 +324,7 @@ class HttpServletRequestWrapper extends Object implements HttpServletRequest
 	 * @return String[] an array containing all of the current server cookies
 	 * @access public
 	 */
-	public function getCookies()
-	{
+	public function getCookies() {
 		return $_COOKIE;
 	}
 }
-?>

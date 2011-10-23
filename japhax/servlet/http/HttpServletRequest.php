@@ -1,18 +1,10 @@
-<?
-package("japhax.servlet.http");
+<?php
+namespace japhax\servlet\http;
 
 /**
- * $Id$
- *
  * Interface that will define all of the actions that can be taken during Http Requests.
- *
- * Known subclasses: HttpRequestWrapper
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-interface HttpServletRequest
-{
+interface HttpServletRequest {
 	/**
 	* Returns the names of the parameter variables
 	*
@@ -202,4 +194,3 @@ interface HttpServletRequest
 	 */
 	public function getCookies();
 }
-?>

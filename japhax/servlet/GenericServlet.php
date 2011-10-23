@@ -1,12 +1,9 @@
-<?
-package("japhax.servlet");
+<?php
+namespace japhax\servlet;
 
-import("japhax.servlet.Servlet");
-import("japhax.servlet.ServletConfig");
+use japha\io\_Serializable;
 
 /**
- * $Id$
- *
  * Defines a generic, protocol-independent servlet. To write an HTTP servlet for use on the Web, 
  * extend HttpServlet instead. 
  *
@@ -19,12 +16,8 @@ import("japhax.servlet.ServletConfig");
  * also implements the log method, declared in the ServletContext interface. 
  *
  * To write a generic servlet, you need only override the abstract service method. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$ $Date$
  */
-abstract class GenericServlet extends Object implements Servlet, ServletConfig, Serializable 
-{
+abstract class GenericServlet extends Object implements Servlet, ServletConfig, _Serializable {
 	//abstract public function destroy();
 	abstract public function getInitParameter( $name );
 	abstract public function getInitParameterNames();
@@ -36,4 +29,3 @@ abstract class GenericServlet extends Object implements Servlet, ServletConfig, 
 	abstract public function log();
 	//abstract public function service( ServletRequest $req, ServletResponse $resp );
 }
-?>
