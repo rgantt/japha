@@ -2,7 +2,8 @@
 namespace com\japha\iterator;
 
 use japha\lang\Object;
-use japha\util\Iterator;
+use japha\util\AbstractList;
+use japha\util\_Iterator;
 
 /**
  * <code>class ArrayIterator</code>

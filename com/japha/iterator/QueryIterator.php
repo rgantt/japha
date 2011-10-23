@@ -1,14 +1,14 @@
 <?
 namespace com\japha\iterator;
 
-use japha\lang\Iterator;
+use japha\lang\_Iterator;
 
 /**
  * <code>class QueryIterator</code>
  * This class will iterate over an sql result object, field by field.
  * The usage for this class would probably be seen best in the following:
  */
-class QueryIterator extends Iterator {
+class QueryIterator extends _Iterator {
 	/**
 	 * Result set to iterate over
 	 *

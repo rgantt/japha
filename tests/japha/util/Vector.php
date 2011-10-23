@@ -1,34 +1,24 @@
 <?php
-require_once('../japha.php');
+require_once('../../../japha.php');
 
-import('jpunit.framework.TestCase');
-import('jpunit.framework.Assert');
-import('jpunit.ui.textui.TestRunner');
-
-import('japha.util.Vector');
+use japha\util\Vector;
+use japha\lang\String;
 
 /**
  * Unit tests for Vector class. 
- * 
- * @author bsdlite
- * $Id$
  */
-
-class VectorTest extends TestCase
-{
+class VectorTest extends PHPUnit_Framework_TestCase {
 	private $v1;
 	private $v2;
 	
 	private $cases = array();
 	
-	protected function setUp()
-	{	
+	protected function setUp() {	
 		$this->v1 = new Vector();
 		$this->v2 = new Vector();
 		
 		$j = rand( 5, 100 );
-		for( $i = 0; $i <= $j; $i++ )
-		{
+		for( $i = 0; $i <= $j; $i++ ) {
 			$val = new String( rand( 0, 1 ) );
 			$this->cases[] = $val;
 			$this->v1->add( $val );
@@ -36,14 +26,12 @@ class VectorTest extends TestCase
 		$this->v2->addAll( $this->cases );
 	}
 	
-	protected function tearDown()
-	{
+	protected function tearDown() {
 		unset( $this->v1 );
 		unset( $this->v2 );
 	}
 	
-	public function testGet()
-	{
+	public function testGet() {
 		$v = new Vector();
 		$v->add( new String('these') );
 		$v->add( new String('are') );
@@ -58,34 +46,29 @@ class VectorTest extends TestCase
 		$str = '';
 		
 		$it = $n->iterator();
-		while( $it->hasNext() )
-		{
+		while( $it->hasNext() ) {
 			$str .= $it->current();
 			$it->next();
 		}		
-		Assert::assertEquals( $str, 'thesearethewordsofasentence' );
+		$this->assertEquals( $str, 'thesearethewordsofasentence' );
 	}
 	
-	public function testEquals()
-	{
+	public function testEquals() {
 		$v = new Vector();
 		$v->addAll( $this->cases );
-		Assert::assertEquals( $this->v1, $this->v2 );
-		Assert::assertEquals( $this->v1, $v );
+		$this->assertEquals( $this->v1, $this->v2 );
+		$this->assertEquals( $this->v1, $v );
 	}
 	
-	public function testSize()
-	{
+	public function testSize() {
 		$v = new Vector();
 		$v->addAll( $this->cases );
-		
-		Assert::assertEquals( count( $this->cases ), $v->size() );
+		$this->assertEquals( count( $this->cases ), $v->size() );
 	}
 	
-	public function testContains()
-	{
-		Assert::assertTrue( $this->v1->containsAll( $this->v2 ) );
-		Assert::assertTrue( $this->v2->containsAll( $this->v1 ) );
+	public function testContains() {
+		$this->assertTrue( $this->v1->containsAll( $this->v2 ) );
+		$this->assertTrue( $this->v2->containsAll( $this->v1 ) );
 
 		$v = new Vector();
 		$v->addAll( $this->cases );
@@ -95,35 +78,18 @@ class VectorTest extends TestCase
 		$v->removeElementAt( rand( 0, $v->size() ) );
 		
 		// confirm the subset/superset relationship
-		Assert::assertTrue( $this->v1->containsAll( $v ) );
-		Assert::assertFalse( !$v->containsAll( $this->v1 ) );
+		$this->assertTrue( $this->v1->containsAll( $v ) );
+		$this->assertFalse( !$v->containsAll( $this->v1 ) );
 	}
 	
-	public function testRemove()
-	{
+	public function testRemove() {
 		$v = new Vector();
 		$v->addAll( $this->cases );
 		$n = new Vector();
 		$n->addAll( $this->cases );
 		
-		Assert::assertEquals( $v, $n );
+		$this->assertEquals( $v, $n );
 		$v->removeElementAt( rand( 0, $v->size() ) );
-		Assert::assertEquals( $v, $n );		
-	}
-	
-	public static function suite() 
-	{
-	    $suite = new TestSuite();
-	    $suite->addTest( new VectorTest('testEquals') );
-	    $suite->addTestSuite( _Class::forName('VectorTest') );
-	    return $suite;
-	}
-	
-	public static function main( $args = array() )
-	{
-    	    TestRunner::run( VectorTest::suite() );
+		$this->assertNotEquals( $v, $n );		
 	}
 }
-
-echo '<pre>';
-VectorTest::main();

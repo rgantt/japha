@@ -44,27 +44,30 @@ use japha\io\_Serializable;
  * on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
  */
 class HashMap extends AbstractMap implements Cloneable, Map, _Serializable {
-	private $loadFactor = 0.75;
+	private $allocated = 0;
 	private $capacity = 16;
+	
+	private $loadFactor = 0.75;
 	
 	/**
 	 * More like... sillymorphism
 	 */
     public function __construct() {
+		parent::__construct();
         $argv = func_get_args();
         switch( func_num_args() ) {
             case 1:   
                 if( $argv[0] instanceof Map ) {  
                     $this->HashMap0( $argv[0] );
-                    break;
-                }
-				$this->capacity = $argv[0];
+                } else {
+					$this->capacity = $argv[0];
+				}
                 break;
             case 2:
 				$this->capacity = $argv[0];
 				$this->loadFactor = $argv[1];
                 break;
-        }   
+        }
     }
        
     /**

@@ -1,7 +1,7 @@
 <?
 namespace com\japha\iterator;
 
-use japha\lang\Iterator;
+use japha\lang\_Iterator;
 
 /**
  * Class <code>DirectoryIterator</code> provides a simple iterator for traversing the
@@ -39,7 +39,7 @@ use japha\lang\Iterator;
  *   how this is configured.
  * </p>
  */
-class DirectoryIterator extends Iterator
+class DirectoryIterator extends _Iterator
 {
 	/**
 	 * The name of the directory

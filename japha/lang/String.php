@@ -1,22 +1,10 @@
 <?
-package("java.lang");
+namespace japha\lang;
 
-//import("java.io.ObjectStreamClass");
-//import('java.io.ObjectStreamField");
-import("japha.io.Serializable");
-import("japha.lang.Comparable");
-import("japha.lang.CharSequence");
-import("japha.io.UnsupportedEncodingException");
-import("japha.util.ArrayList");
-import("japha.util.Comparator");
-import("japha.util.Locale");
-//import("java.util.regex.Matcher");
-//import("java.util.regex.Pattern");
-//import("java.util.regex.PatternSyntaxException");
+use japha\io\_Serializable;
+use japha\io\UnsupportedEncodingException;
 
 /**
- * $Id$
- *
  * The <code>String</code> class represents character strings. All
  * string literals in Java programs, such as <code>"abc"</code>, are
  * implemented as instances of this class.
@@ -64,14 +52,11 @@ import("japha.util.Locale");
  * <p> Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
  * or method in this class will cause a {@link NullPointerException} to be
  * thrown.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
 class String extends Object implements _Serializable//, Comparable, CharSequence
 {
     /** The value is used for character storage. */
-    private $value =array();
+    private $value = array();
 
     /** The offset is the first index of the storage that is used. */
     private $offset;
