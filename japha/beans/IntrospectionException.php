@@ -1,7 +1,7 @@
-<?
-package("japha.beans");
+<?php
+namespace japha\beans;
 
-import("japha.lang.Exception");
+use japha\lang\Exception;
 
 /**
  * $Id$
@@ -16,4 +16,3 @@ class IntrospectionException extends Exception
 		$this->message = $mess;
 	}
 }
-?>

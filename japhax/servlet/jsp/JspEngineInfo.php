@@ -1,4 +1,4 @@
-<?
+<?php
 package("japhax.servlet.jsp");
 
 import("japha.lang.Object");

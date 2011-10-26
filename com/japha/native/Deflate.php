@@ -1,8 +1,7 @@
-<?
-package("com.japha.native");
+<?php
+namespace com\japha\native;
 
-import("japha.lang.Object");
-import("japha.io.*");
+use japha\lang\Object;
 
 /**
  * $Id$

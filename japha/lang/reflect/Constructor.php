@@ -1,4 +1,4 @@
-<?
+<?php
 package("japha.lang.reflect");
 
 import("japha.lang.reflect.AccessibleObject");

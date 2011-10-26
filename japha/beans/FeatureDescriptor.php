@@ -1,5 +1,5 @@
-<?
-package("japha.beans");
+<?php
+namespace japha\beans;
 
 /**
  * $Id$
@@ -96,4 +96,3 @@ class FeatureDescriptor extends Object
         $this->preferred = $bool;   
     }
 }
-?>

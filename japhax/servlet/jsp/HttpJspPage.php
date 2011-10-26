@@ -1,4 +1,4 @@
-<?
+<?php
 package("japhax.servlet.jsp");
 
 import("japhax.servlet.jsp.JspPage");

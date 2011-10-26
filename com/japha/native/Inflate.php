@@ -1,5 +1,5 @@
-<?
-package("com.japha.native");
+<?php
+namespace com\japha\native;
 
 /**
  * $Id$

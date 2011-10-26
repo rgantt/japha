@@ -1,4 +1,4 @@
-<?
+<?php
 package("japha.security");
 
 import("japha.security.Permission");

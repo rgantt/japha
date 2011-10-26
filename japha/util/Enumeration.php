@@ -1,4 +1,4 @@
-<?
+<?php
 namespace japha\util;
 
 /**

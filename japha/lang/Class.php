@@ -1,4 +1,4 @@
-<?
+<?php
 import("japha.lang.Object");
 
 import('japha.lang.reflect.Constructor');

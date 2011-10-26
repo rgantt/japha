@@ -1,7 +1,7 @@
-<?
-package("japha.beans");
+<?php
+namespace japha\beans;
 
-import("japha.beans.FeatureDescriptor");
+use japha\beans\FeatureDescriptor;
 
 /**
  * $Id$
@@ -135,4 +135,3 @@ class PropertyDescriptor extends FeatureDescriptor
         $this->setter = $setter;
     }
 }
-?>

@@ -1,5 +1,5 @@
-<?
-package("com.japha.native.core");
+<?php
+namespace com\japha\native\core;
 
 /**
  * $Id$
@@ -19,4 +19,3 @@ class JaphaInfo
     	echo "<div align=\"center\"><a href=\"http://japha.xzon.net\">http://japha.xzon.net</a></div>";
     }
 }
-?>

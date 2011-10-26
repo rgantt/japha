@@ -1,4 +1,4 @@
-<?
+<?php
 package("japha.lang");
 
 import("japha.lang.CharSequence");

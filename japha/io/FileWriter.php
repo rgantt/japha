@@ -1,4 +1,4 @@
-<?
+<?php
 package("japha.io");
 
 import("japha.io.InputStreamWriter");

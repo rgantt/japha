@@ -1,4 +1,4 @@
-<?
+<?php
 namespace com\japha\iterator;
 
 use japha\util\_Iterator;

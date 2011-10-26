@@ -1,4 +1,4 @@
-<?
+<?php
 namespace japha\lang;
 
 use japha\lang\Throwable;

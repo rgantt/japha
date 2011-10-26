@@ -1,4 +1,4 @@
-<?
+<?php
 package("japha.net");
 
 import("japhax.servlet.http.HttpServletRequest");
