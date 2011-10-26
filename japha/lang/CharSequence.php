@@ -1,9 +1,7 @@
 <?php
-package("japha.lang");
+namespace japha\lang;
 
 /**
- * $Id$
- *
  * A CharSequence is a readable sequence of characters. 
  * This interface provides uniform, read-only access to many different kinds of character sequences. 
  * This interface does not refine the general contracts of the equals and hashCode methods. 
@@ -12,12 +10,8 @@ package("japha.lang");
  * be capable of testing its instances for equality with those of the other. 
  * It is therefore inappropriate to use arbitrary CharSequence instances as elements in a set or as keys 
  * in a map. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt
- * @version $Revision$
  */
-interface CharSequence
-{
+interface CharSequence {
     /**
      * Returns the character at the specified index. An index ranges from zero to length() - 1. 
      * The first character of the sequence is at index zero, the next at index one, and so on, as for array indexing. 
@@ -64,4 +58,3 @@ interface CharSequence
      */
     public function toString();
 }
-?>

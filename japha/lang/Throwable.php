@@ -93,7 +93,9 @@ use japha\io\_Serializable;
  * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
  * @version $Revision$
  */
-class Throwable extends Object implements _Serializable
+ 
+// kind of want this to extend object so that we can use it in any context
+class Throwable extends \Exception implements _Serializable
 {
     /**
      * A short description of the exception and what caused it

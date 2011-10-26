@@ -1,27 +1,21 @@
 <?php
-package("japha.lang.reflect");
+namespace japha\lang\reflect;
 
-import("japha.lang.reflect.AccessibleObject");
+use japha\lang\Object;
+use japha\lang\reflect\AccessibleObject;
 
 /**
- * $Id$
- *
  * Constructor provides information about, and access to, a single constructor for a class. 
  *
  * Constructor permits widening conversions to occur when matching the actual parameters to 
  * newInstance() with the underlying constructor's formal parameters, but throws an 
  * IllegalArgumentException if a narrowing conversion would occur. 
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
-class Constructor extends AccessibleObject
-{
+class Constructor extends AccessibleObject {
 	private $Reflection;
 	private $className = "";
 
-	public function __construct( $class, $name )
-	{
+	public function __construct( $class, $name ) {
 		// this is really dirty, since in Java this is all handled by the ClassLoader and the VM itself
 		$this->className = $class;
 	}
@@ -34,10 +28,8 @@ class Constructor extends AccessibleObject
 	 * @param obj the reference object with which to compare. 
 	 * @returns true if this object is the same as the obj argument; false otherwise.
 	 */
-	public function equals( Object $obj )
-	{
-		if( $this->equals( $obj ) )
-		{
+	public function equals( Object $obj ) {
+		if( $this->equals( $obj ) ) {
 			return true;
 		}
 		return false;	
@@ -62,8 +54,7 @@ class Constructor extends AccessibleObject
 	 * @specified getName in interface Member
 	 * @returns the simple name of the underlying member
 	 */
-	public function getName()
-	{
+	public function getName() {
 		return "__construct";	
 	}
 	
@@ -90,8 +81,7 @@ class Constructor extends AccessibleObject
 	 * @throws InvocationTargetException if the underlying constructor throws an exception. 	
 	 * @throws ExceptionInInitializerError if the initialization provoked by this method fails.
 	 */
-	public function newInstance()
-	{
+	public function newInstance() {
 		return new $this->className;	
 	}
 	
@@ -110,8 +100,7 @@ class Constructor extends AccessibleObject
 	 * @overrides toString in class Object
 	 * @returns a string representation of the object.
 	 */
-	public function toString()
-	{
+	public function toString() {
 		return "__construct";	
 	}
 	
@@ -152,4 +141,3 @@ class Constructor extends AccessibleObject
 	 */
 	public function getModifiers(){}
 }
-?>

@@ -28,4 +28,3 @@ class Exception extends Throwable
 		$this->cause = $cause;
 	}
 }
-?>

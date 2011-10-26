@@ -1,11 +1,9 @@
 <?php
-package("japha.lang");
+namespace japha\lang;
 
-import("japha.lang.CharSequence");
+use japha\lang\Object;
 
 /**
- * $Id$
- *
  * This needs to be reimplemented to accept a numeric constructor parameter (overload the constructor)
  * Also needs to:
  *    - Not suck
@@ -17,12 +15,8 @@ import("japha.lang.CharSequence");
  * You have more control than simply using PHP's .= append feature, because you can work with only
  * one string at a time, making adjustments to that buffer as you work, and call common requests on
  * that buffer.
- *
- * @author <a href="mailto:gantt@cs.montana.edu">Ryan Gantt</a>
- * @version $Revision$
  */
-class StringBuffer extends Object implements CharSequence
-{
+class StringBuffer extends Object implements CharSequence {
     /**
      * This is the final output string. Can only be accessed after toString has been called.
      * @access private
